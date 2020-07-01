@@ -1,3 +1,1 @@
-# Headline
-
-> An awesome project.
+# Dominic Mulligan's home page
