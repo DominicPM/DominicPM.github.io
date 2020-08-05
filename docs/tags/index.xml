@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dominic Mulligan</title>
-    <link>http://dominicpm.github.io/tags/</link>
+    <link>https://dominicpm.github.io/tags/</link>
     <description>Recent content in Tags on Dominic Mulligan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020</copyright>
     <lastBuildDate>Thu, 02 Jul 2020 12:05:55 +0100</lastBuildDate>
     
-	<atom:link href="http://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>site-administration</title>
-      <link>http://dominicpm.github.io/tags/site-administration/</link>
+      <link>https://dominicpm.github.io/tags/site-administration/</link>
       <pubDate>Thu, 02 Jul 2020 12:05:55 +0100</pubDate>
       
-      <guid>http://dominicpm.github.io/tags/site-administration/</guid>
+      <guid>https://dominicpm.github.io/tags/site-administration/</guid>
       <description></description>
     </item>
     
