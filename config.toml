@@ -5,6 +5,7 @@ theme = "noteworthy"
 author = "Dominic Mulligan"
 copyright = "Dominic Mulligan, 2020"
 enableRobotsTXT = true
+publishDir = "docs"
 
 [menu]
   [[menu.main]]

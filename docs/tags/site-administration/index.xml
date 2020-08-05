@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>site-administration on Dominic Mulligan</title>
+    <link>http://dominicpm.github.io/tags/site-administration/</link>
+    <description>Recent content in site-administration on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020</copyright>
+    <lastBuildDate>Thu, 02 Jul 2020 12:05:55 +0100</lastBuildDate>
+    
+	<atom:link href="http://dominicpm.github.io/tags/site-administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Homepage</title>
+      <link>http://dominicpm.github.io/posts/new-homepage/</link>
+      <pubDate>Thu, 02 Jul 2020 12:05:55 +0100</pubDate>
+      
+      <guid>http://dominicpm.github.io/posts/new-homepage/</guid>
+      <description>Due to increasing unreliability of my website host, and regular security issues with WordPress, I have moved to a static site hosted on Github pages.</description>
+    </item>
+    
+  </channel>
+</rss>

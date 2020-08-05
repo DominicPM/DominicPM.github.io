@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dominic Mulligan</title>
+    <link>http://dominicpm.github.io/</link>
+    <description>Recent content on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020</copyright>
+    <lastBuildDate>Thu, 02 Jul 2020 12:05:55 +0100</lastBuildDate>
+    
+	<atom:link href="http://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publications</title>
+      <link>http://dominicpm.github.io/publications/</link>
+      <pubDate>Thu, 02 Jul 2020 13:14:41 +0100</pubDate>
+      
+      <guid>http://dominicpm.github.io/publications/</guid>
+      <description>Click here for my DBLP entry and here for my Google Scholar entry.
+Journals  Permissive nominal terms and their unification: an infinite, coinfinite approach to nominal techniques. Gilles Dowek, Murdoch J. Gabbay, and Dominic P. Mulligan. Logic Journal of the Interest Group in Pure Logic, volume 18, issue 6, pages 769–822, 2011. Curry-Howard for incomplete first-order logic derivations using one-and-a-half level terms. Murdoch J. Gabbay and Dominic P. Mulligan. Journal of Information and Computation, volume 208, issue 3, pages 230–258, 2010.</description>
+    </item>
+    
+    <item>
+      <title>New Homepage</title>
+      <link>http://dominicpm.github.io/posts/new-homepage/</link>
+      <pubDate>Thu, 02 Jul 2020 12:05:55 +0100</pubDate>
+      
+      <guid>http://dominicpm.github.io/posts/new-homepage/</guid>
+      <description>Due to increasing unreliability of my website host, and regular security issues with WordPress, I have moved to a static site hosted on Github pages.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://dominicpm.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dominicpm.github.io/about/</guid>
+      <description>I am currently a Staff Research Engineer within the Security Group at Arm Research, UK. My current research focuses within Arm are privacy-preserving computation and correctness for low-level, security-critical software.
+Prior to joining Arm, I was a postdoctoral research scientist, first at the Dipartimento di Scienze dell&amp;rsquo;Informazione at the University of Bologna, and later at the Computer Laboratory at the University of Cambridge. I worked on the specification and verification of low-level systems software, such as C compilers and ELF linkers.</description>
+    </item>
+    
+  </channel>
+</rss>
