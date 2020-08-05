@@ -1,0 +1,21 @@
+baseURL = "http://dominicpm.github.io/"
+languageCode = "en-gb"
+title = "Dominic Mulligan"
+theme = "noteworthy"
+author = "Dominic Mulligan"
+copyright = "Dominic Mulligan, 2020"
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 0
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    title = "Publications"
+    url = "/publications/"
+    weight = 0
