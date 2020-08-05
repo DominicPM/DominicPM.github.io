@@ -1,4 +1,4 @@
-baseURL = "http://dominicpm.github.io/"
+baseURL = "https://dominicpm.github.io/"
 languageCode = "en-gb"
 title = "Dominic Mulligan"
 theme = "noteworthy"
