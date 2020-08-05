@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020</copyright>
-    <lastBuildDate>Thu, 02 Jul 2020 12:05:55 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 16:21:05 +0100</lastBuildDate>
     
 	<atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Publications list</title>
+      <link>https://dominicpm.github.io/posts/publications-list/</link>
+      <pubDate>Wed, 05 Aug 2020 16:21:05 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/publications-list/</guid>
+      <description>I have now moved my bibliography over from my old website. The list can be found here.</description>
+    </item>
     
     <item>
       <title>New Homepage</title>
