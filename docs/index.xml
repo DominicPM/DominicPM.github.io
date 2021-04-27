@@ -46,15 +46,5 @@ Journals  Permissive nominal terms and their unification: an infinite, coinfinit
 Prior to joining Arm, I was a postdoctoral research scientist, first at the Dipartimento di Scienze dell&amp;rsquo;Informazione at the University of Bologna, and later at the Computer Laboratory at the University of Cambridge. I worked on the specification and verification of low-level systems software, such as C compilers and ELF linkers.</description>
     </item>
     
-    <item>
-      <title>Privacy-preserving collaborative compute with Veracruz</title>
-      <link>https://dominicpm.github.io/posts/veracruz/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/posts/veracruz/</guid>
-      <description>Veracruz is a project that I&amp;rsquo;ve been working on for a while internally within Arm Research. Recently, Veracruz was released as an open-source project on Github, with all development and design discussions moving into the open. This was a precursor to the project being adopted by the Linux Foundation&amp;rsquo;s Confidential Computing Consortium (CCC), which I&amp;rsquo;m pleased to say finally happened a few weeks ago, at the beginning of April.
-In this post, I&amp;rsquo;ll explain a little bit more about the project and what its motivation.</description>
-    </item>
-    
   </channel>
 </rss>
