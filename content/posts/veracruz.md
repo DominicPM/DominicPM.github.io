@@ -2,6 +2,7 @@
 title: "Privacy-preserving collaborative compute with Veracruz"
 date: 2021-04-237T23:11:54+01:00
 draft: false
+tags: ["veracruz", "confidential-compute"]
 ---
 
 [Veracruz](https://github.com/veracruz-project/veracruz) is a project that I've been working on for a while internally within Arm Research.
