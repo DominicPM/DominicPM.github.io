@@ -3,7 +3,7 @@ languageCode = "en-gb"
 title = "Dominic Mulligan"
 theme = "noteworthy"
 author = "Dominic Mulligan"
-copyright = "Dominic Mulligan, 2020"
+copyright = "Dominic Mulligan, 2020–2021"
 enableRobotsTXT = true
 publishDir = "docs"
 
