@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Tue, 27 Apr 2021 23:11:54 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Sep 2021 16:35:38 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted paper at IEEE/ACM MICRO 2021</title>
+      <link>https://dominicpm.github.io/posts/micro-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/micro-2021-paper/</guid>
+      <description>I am pleased to announce that the paper &amp;ldquo;Synthesizing formal models of hardware from RTL for efficient verification of memory model implementations&amp;rdquo; has been accepted for publication at the IEEE/ACM International Symposium on Microarchitecture (MICRO) 2021. This is a paper co-written with Yao Hsiao (Stanford), Gustavo Petri (Arm Research), Nikos Nikoleris (Arm Research), and Caroline Trippel (Stanford).</description>
+    </item>
+    
+    <item>
+      <title>Invited paper at IEEE SEED 2021</title>
+      <link>https://dominicpm.github.io/posts/seeds-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:23:22 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/seeds-2021-paper/</guid>
+      <description>I am happy to announce a new paper&amp;mdash;an invited contribution from industry&amp;mdash;accepted at the IEEE International Symposium on Secure and Private Execution Environment Design (SEED 2021): &amp;ldquo;Seeds of SEED: Confidential Computing&amp;mdash;a brave new world&amp;rdquo;. This was written with some of my colleagues at Arm: Gustavo Petri, Nick Spinale, Gareth Stockwell, and Hugo Vincent.</description>
+    </item>
+    
     <item>
       <title>Privacy-preserving collaborative compute with Veracruz</title>
       <link>https://dominicpm.github.io/posts/veracruz/</link>
@@ -16,6 +34,18 @@
       <guid>https://dominicpm.github.io/posts/veracruz/</guid>
       <description>Veracruz is a project that I&amp;rsquo;ve been working on for a while internally within Arm Research. Recently, Veracruz was released as an open-source project on Github, with all development and design discussions moving into the open. This was a precursor to the project being adopted by the Linux Foundation&amp;rsquo;s Confidential Computing Consortium (CCC), which I&amp;rsquo;m pleased to say finally happened a few weeks ago, at the beginning of April.
 In this post, I&amp;rsquo;ll explain a little bit more about the project and what its motivation.</description>
+    </item>
+    
+    <item>
+      <title>Content test</title>
+      <link>https://dominicpm.github.io/posts/content-test/</link>
+      <pubDate>Wed, 05 Aug 2020 16:45:31 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/content-test/</guid>
+      <description>Testing the configuration of MathJax and syntax highlighting $\lambda{x}.\ x$.
+Types Terms I will fix a countably infinite set of variables, and will use $x, y, z$, and so on, to range permutatively over variables. Similarly, I will fix a countably infinite set of constants, and will use $C, D, E$, and so on, to range over constants.
+Recursively define terms with the following grammar:
+$$ % r, s, t ::= x \mid C \mid rs \mid \lambda{x{:}\tau}.</description>
     </item>
     
     <item>
