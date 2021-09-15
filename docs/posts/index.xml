@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Tue, 07 Sep 2021 16:35:38 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Sep 2021 13:43:46 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Invited talk at FICS, the University of Florida</title>
+      <link>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</link>
+      <pubDate>Wed, 15 Sep 2021 13:43:46 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</guid>
+      <description>I&amp;rsquo;d like to thank Prof. Kevin Butler for inviting me to give a keynote talk at the Technical Demo Conference within the Florida Institute for Cybersecurity Research (FICS) at the University of Florida. My slides for the talk—Confidential Computing: Brave New World— are available here in Microsoft PowerPoint format.</description>
+    </item>
+    
     <item>
       <title>Accepted paper at IEEE/ACM MICRO 2021</title>
       <link>https://dominicpm.github.io/posts/micro-2021-paper/</link>
@@ -34,18 +43,6 @@
       <guid>https://dominicpm.github.io/posts/veracruz/</guid>
       <description>Veracruz is a project that I&amp;rsquo;ve been working on for a while internally within Arm Research. Recently, Veracruz was released as an open-source project on Github, with all development and design discussions moving into the open. This was a precursor to the project being adopted by the Linux Foundation&amp;rsquo;s Confidential Computing Consortium (CCC), which I&amp;rsquo;m pleased to say finally happened a few weeks ago, at the beginning of April.
 In this post, I&amp;rsquo;ll explain a little bit more about the project and what its motivation.</description>
-    </item>
-    
-    <item>
-      <title>Content test</title>
-      <link>https://dominicpm.github.io/posts/content-test/</link>
-      <pubDate>Wed, 05 Aug 2020 16:45:31 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/posts/content-test/</guid>
-      <description>Testing the configuration of MathJax and syntax highlighting $\lambda{x}.\ x$.
-Types Terms I will fix a countably infinite set of variables, and will use $x, y, z$, and so on, to range permutatively over variables. Similarly, I will fix a countably infinite set of constants, and will use $C, D, E$, and so on, to range over constants.
-Recursively define terms with the following grammar:
-$$ % r, s, t ::= x \mid C \mid rs \mid \lambda{x{:}\tau}.</description>
     </item>
     
     <item>
