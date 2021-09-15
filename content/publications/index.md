@@ -19,10 +19,12 @@ Murdoch J. Gabbay and Dominic P. Mulligan.
 
 - *Synthesizing formal models of hardware from RTL for efficient verification of memory model implementations.*
 Yao Hsiao, Dominic P. Mulligan, Nikos Nikoleris, Gustavo Petri, and Caroline Trippel.
-**Accepted at the 54th IEEE/ACM International Symposium on Microarchitecture (MICRO)**, 2021. 
+**Accepted at the 54th IEEE/ACM International Symposium on Microarchitecture (MICRO)**, 2021.
+[PDF](./hsiao-micro2021.pdf)
 - *Seeds of SEED: Confidential Computing---a brave new world (invited industry paper).*
 Dominic P. Mulligan, Gustavo Petri, Nick Spinale, Gareth Stockwell, and Hugo J. M. Vincent.
 **Accepted at the IEEE International Symposium on Secure and Private Execution Environment Design (SEED)**, 2021.
+[PDF](./mulligan-seed2021.pdf)
 - *Interleaving anomalies in collaborative text editors.*
 Martin Kleppmann, Victor B. F. Gomes, Dominic P. Mulligan, and Alastair R. Beresford.
 **Proceedings of the 6th Workshop on the Principles and Practice of Consistency for Distributed Data (PaPoC)**, 2019.
