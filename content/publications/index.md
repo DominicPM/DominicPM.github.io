@@ -8,6 +8,11 @@ Click [here](https://dblp2.uni-trier.de/pers/hd/m/Mulligan:Dominic_P=) for my DB
 
 # Journals
 
+- *A highly-available move operation for replicated trees.*
+Martin Kleppmann, Dominic P. Mulligan, Victor Gomes, and Alastair Beresford.
+**IEEE Transactions on Parallel and Distributed Systems**.
+In press, 2021.
+[PDF](./kleppmann-highly-available.pdf)
 - *Permissive nominal terms and their unification: an infinite, coinfinite approach to nominal techniques.*
 Gilles Dowek, Murdoch J. Gabbay, and Dominic P. Mulligan.
 **Logic Journal of the Interest Group in Pure Logic**, volume 18, issue 6, pages 769&ndash;822, 2011.
