@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Wed, 15 Sep 2021 13:43:46 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Oct 2021 09:40:45 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted paper at IEEE Transactions on Parallel and Distributed Systems</title>
+      <link>https://dominicpm.github.io/posts/ieee-tpds-2021-paper/</link>
+      <pubDate>Mon, 04 Oct 2021 09:40:45 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/ieee-tpds-2021-paper/</guid>
+      <description>I am please to announce that the paper &amp;ldquo;A highly-available move operation for replicated trees&amp;rdquo; has now been accepted for publication at IEEE Transactions on Parallel and Distributed Systems (TPDS). This is joint work with Martin Kleppmann, Victor Gomes, and Alastair Beresford.</description>
+    </item>
+    
     <item>
       <title>Invited talk at FICS, the University of Florida</title>
       <link>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</link>
@@ -61,7 +70,7 @@ In this post, I&amp;rsquo;ll explain a little bit more about the project and wha
       
       <guid>https://dominicpm.github.io/publications/</guid>
       <description>Click here for my DBLP entry and here for my Google Scholar entry.
-Journals  Permissive nominal terms and their unification: an infinite, coinfinite approach to nominal techniques. Gilles Dowek, Murdoch J. Gabbay, and Dominic P. Mulligan. Logic Journal of the Interest Group in Pure Logic, volume 18, issue 6, pages 769–822, 2011. Curry-Howard for incomplete first-order logic derivations using one-and-a-half level terms. Murdoch J. Gabbay and Dominic P. Mulligan. Journal of Information and Computation, volume 208, issue 3, pages 230–258, 2010.</description>
+Journals  A highly-available move operation for replicated trees. Martin Kleppmann, Dominic P. Mulligan, Victor Gomes, and Alastair Beresford. IEEE Transactions on Parallel and Distributed Systems. In press, 2021. PDF Permissive nominal terms and their unification: an infinite, coinfinite approach to nominal techniques. Gilles Dowek, Murdoch J. Gabbay, and Dominic P. Mulligan. Logic Journal of the Interest Group in Pure Logic, volume 18, issue 6, pages 769–822, 2011.</description>
     </item>
     
     <item>
