@@ -22,6 +22,10 @@ Murdoch J. Gabbay and Dominic P. Mulligan.
 
 # Conferences and workshops
 
+- *The Supervisionary proof-checking kernel: or, a work-in-progress towards proof-generating code.*
+Dominic P. Mulligan, Nick Spinale.
+**Accepted at the 6th Workshop on Principles of Secure Compilation (PriSC)**, 2022.
+[PDF](./mulligan-prisc2022.pdf)
 - *Synthesizing formal models of hardware from RTL for efficient verification of memory model implementations.*
 Yao Hsiao, Dominic P. Mulligan, Nikos Nikoleris, Gustavo Petri, and Caroline Trippel.
 **Accepted at the 54th IEEE/ACM International Symposium on Microarchitecture (MICRO)**, 2021.
