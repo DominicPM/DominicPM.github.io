@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>verification on Dominic Mulligan</title>
+    <link>https://dominicpm.github.io/tags/verification/</link>
+    <description>Recent content in verification on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <lastBuildDate>Tue, 07 Sep 2021 16:35:38 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted paper at IEEE/ACM MICRO 2021</title>
+      <link>https://dominicpm.github.io/posts/micro-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/micro-2021-paper/</guid>
+      <description>I am pleased to announce that the paper &amp;ldquo;Synthesizing formal models of hardware from RTL for efficient verification of memory model implementations&amp;rdquo; has been accepted for publication at the IEEE/ACM International Symposium on Microarchitecture (MICRO) 2021. This is a paper co-written with Yao Hsiao (Stanford), Gustavo Petri (Arm Research), Nikos Nikoleris (Arm Research), and Caroline Trippel (Stanford).</description>
+    </item>
+    
+  </channel>
+</rss>

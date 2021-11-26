@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oc3 on Dominic Mulligan</title>
+    <link>https://dominicpm.github.io/tags/oc3/</link>
+    <description>Recent content in oc3 on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <lastBuildDate>Fri, 26 Nov 2021 13:59:39 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/oc3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OC3 programme committee invite</title>
+      <link>https://dominicpm.github.io/posts/oc3-programme-committee/</link>
+      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/oc3-programme-committee/</guid>
+      <description>I am honoured to have been invited to serve on the Open Confidential Computing Conference (OC3 2021) programme committee. Please, consider submitting a talk proposal! Derek Miller, from the Veracruz project, presented a talk at last year&amp;rsquo;s OC3 event which had a great mix of interesting talks and was very well attended.</description>
+    </item>
+    
+  </channel>
+</rss>

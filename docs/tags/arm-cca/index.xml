@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arm-cca on Dominic Mulligan</title>
+    <link>https://dominicpm.github.io/tags/arm-cca/</link>
+    <description>Recent content in arm-cca on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <lastBuildDate>Wed, 15 Sep 2021 13:43:46 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/arm-cca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Invited talk at FICS, the University of Florida</title>
+      <link>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</link>
+      <pubDate>Wed, 15 Sep 2021 13:43:46 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</guid>
+      <description>I&amp;rsquo;d like to thank Prof. Kevin Butler for inviting me to give a keynote talk at the Technical Demo Conference within the Florida Institute for Cybersecurity Research (FICS) at the University of Florida. My slides for the talk—Confidential Computing: Brave New World— are available here in Microsoft PowerPoint format.</description>
+    </item>
+    
+    <item>
+      <title>Invited paper at IEEE SEED 2021</title>
+      <link>https://dominicpm.github.io/posts/seeds-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:23:22 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/seeds-2021-paper/</guid>
+      <description>I am happy to announce a new paper&amp;mdash;an invited contribution from industry&amp;mdash;accepted at the IEEE International Symposium on Secure and Private Execution Environment Design (SEED 2021): &amp;ldquo;Seeds of SEED: Confidential Computing&amp;mdash;a brave new world&amp;rdquo;. This was written with some of my colleagues at Arm: Gustavo Petri, Nick Spinale, Gareth Stockwell, and Hugo Vincent.</description>
+    </item>
+    
+  </channel>
+</rss>
