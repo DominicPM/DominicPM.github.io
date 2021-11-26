@@ -2,14 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dominicpm.github.io/tags/confidential-computing/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/oc3/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/posts/oc3-programme-committee/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/posts/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/veracruz/</loc>
+    <lastmod>2021-11-26T13:59:39+00:00</lastmod>
+  </url><url>
     <loc>https://dominicpm.github.io/posts/ieee-tpds-2021-paper/</loc>
     <lastmod>2021-10-04T09:40:45+01:00</lastmod>
   </url><url>
-    <loc>https://dominicpm.github.io/</loc>
+    <loc>https://dominicpm.github.io/tags/crdt/</loc>
     <lastmod>2021-10-04T09:40:45+01:00</lastmod>
   </url><url>
-    <loc>https://dominicpm.github.io/posts/</loc>
-    <lastmod>2021-10-04T09:40:45+01:00</lastmod>
+    <loc>https://dominicpm.github.io/tags/arm-cca/</loc>
+    <lastmod>2021-09-15T13:43:46+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</loc>
     <lastmod>2021-09-15T13:43:46+01:00</lastmod>
@@ -17,8 +38,17 @@
     <loc>https://dominicpm.github.io/posts/micro-2021-paper/</loc>
     <lastmod>2021-09-07T16:35:38+01:00</lastmod>
   </url><url>
+    <loc>https://dominicpm.github.io/tags/memory-models/</loc>
+    <lastmod>2021-09-07T16:35:38+01:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/verification/</loc>
+    <lastmod>2021-09-07T16:35:38+01:00</lastmod>
+  </url><url>
     <loc>https://dominicpm.github.io/posts/seeds-2021-paper/</loc>
     <lastmod>2021-09-07T16:23:22+01:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/posts/cbmc-introduction/</loc>
+    <lastmod>2021-04-28T11:03:09+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/tags/arm/</loc>
     <lastmod>2021-04-27T23:11:54+01:00</lastmod>
@@ -27,12 +57,6 @@
     <lastmod>2021-04-27T23:11:54+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/posts/veracruz/</loc>
-    <lastmod>2021-04-27T23:11:54+01:00</lastmod>
-  </url><url>
-    <loc>https://dominicpm.github.io/tags/</loc>
-    <lastmod>2021-04-27T23:11:54+01:00</lastmod>
-  </url><url>
-    <loc>https://dominicpm.github.io/tags/veracruz/</loc>
     <lastmod>2021-04-27T23:11:54+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/posts/publications-list/</loc>

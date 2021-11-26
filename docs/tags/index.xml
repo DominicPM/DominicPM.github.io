@@ -7,7 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Tue, 27 Apr 2021 23:11:54 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 13:59:39 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>confidential-computing</title>
+      <link>https://dominicpm.github.io/tags/confidential-computing/</link>
+      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oc3</title>
+      <link>https://dominicpm.github.io/tags/oc3/</link>
+      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/oc3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>veracruz</title>
+      <link>https://dominicpm.github.io/tags/veracruz/</link>
+      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crdt</title>
+      <link>https://dominicpm.github.io/tags/crdt/</link>
+      <pubDate>Mon, 04 Oct 2021 09:40:45 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/crdt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arm-cca</title>
+      <link>https://dominicpm.github.io/tags/arm-cca/</link>
+      <pubDate>Wed, 15 Sep 2021 13:43:46 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/arm-cca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory-models</title>
+      <link>https://dominicpm.github.io/tags/memory-models/</link>
+      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/memory-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>verification</title>
+      <link>https://dominicpm.github.io/tags/verification/</link>
+      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/verification/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>arm</title>
       <link>https://dominicpm.github.io/tags/arm/</link>
@@ -23,15 +86,6 @@
       <pubDate>Tue, 27 Apr 2021 23:11:54 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/confidential-compute/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>veracruz</title>
-      <link>https://dominicpm.github.io/tags/veracruz/</link>
-      <pubDate>Tue, 27 Apr 2021 23:11:54 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
       <description></description>
     </item>
     
