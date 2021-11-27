@@ -1,4 +1,4 @@
-I am currently a *Principal Research Engineer* within the Security Group at [Arm Research, UK](https://www.arm.com/resources/research).
+I am currently a *Principal Research Engineer* within the Systems Group at [Arm Research, UK](https://www.arm.com/resources/research).
 My current research focuses within Arm are *privacy-preserving computation* and *correctness* for low-level, security-critical software.
 
 Prior to joining Arm, I was a postdoctoral research scientist, first at the [Dipartimento di Scienze dell'Informazione at the University of Bologna](https://disi.unibo.it), and later at the [Computer Laboratory at the University of Cambridge](https://www.cl.cam.ac.uk).

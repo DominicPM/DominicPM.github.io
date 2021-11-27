@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>Cbmc Introduction | Dominic Mulligan</title>
+    <title>Verifying C code with CBMC: an introduction | Dominic Mulligan</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -118,13 +118,73 @@
         <div id="content" class="content-container">
         
 
-<h1 class="post-title">Cbmc Introduction</h1>
+<h1 class="post-title">Verifying C code with CBMC: an introduction</h1>
     
     <time>April 28, 2021</time>
     
     <div>
         <p>
-        
+        <h2 id="introduction">Introduction</h2>
+<p>The C programming language is all-pervasive, especially in contexts where performance or direct interaction with hardware is necessary.
+It&rsquo;s therefore probably not a surprise that Arm — as a hardware design company — produces lots of C code: we have teams working on Linux kernel enablement for our architecture, we produce our own operating systems and security monitors, we produce our own TLS library, and so on and so forth.
+Many of our C codebases are extremely security sensitive, and within the Systems Research group within Arm Research we&rsquo;ve worked alongside product teams to deploy new methodologies to try to spot security problems in our codebases early.
+One such methodology is the use of formal methods, specifically <em>software verification</em>.</p>
+<p>Deploying software verification methodologies in a commercial setting is a challenge in itself, and probably worthy of its own post.
+To start, many commercial C codebases are not written in pure C, but use a mixture of C with embedded assembly language, either for performance reasons or to implement features that cannot be expressed in C itself.
+This can make many tools choke.
+Even worse, many verification tools, especially those originating in academia, tend not to support the full C standard and will fail to parse real C codebases, or fail to reason about C language features that are common in idiomatic code.
+Finally, many verification techniques require properties be expressed in a dedicated <em>assertion language</em>, for example formulae from some dedicated logic capable of capturing C states for pre- and postcondition reasoning, or similar.
+This tends to make tools hard to deploy in commercial settings if time-strapped product engineers must learn some domain-specific language in order to successfully use a tool.</p>
+<h2 id="cbmc">CBMC</h2>
+<p>The C Bounded Model Checker (or CBMC, henceforth) is a software verification and static analysis tool that we have deployed to good effect internally within product groups in Arm.
+After experimentation with a number of tools, we found CBMC to be well suited to our verification tasks, with many advantages over other systems:</p>
+<ul>
+<li>CBMC uses C language expressions to express properties.
+No separate assertion language is necessary: engineers can reuse existing C knowledge when writing properties to check.</li>
+<li>CBMC is capable of producing counterexamples when a property is invalidated.
+This helps engineers narrow down the source of a bug quickly.</li>
+<li>The CBMC tool is robust, and is capable of parsing and reasoning about real C codebases with the full range of C language features.
+Moreover, there are straightforward mechanisms for dealing with mixed C and assembly codebases.</li>
+<li>Finally, perhaps specific to Arm, CBMC uses model checking techniques that are already familiar to many of our product engineers, as model checking is extensively used for verifying microprocessor RTL within the company.</li>
+</ul>
+<p>In this series, I intend to introduce C language software verification techniques using CBMC.
+I&rsquo;ll start with the very basics in this post.</p>
+<h2 id="installing-cbmc">Installing CBMC</h2>
+<p>To install:</p>
+<ul>
+<li>On MacOS, CBMC can be installed through Homebrew using <code>brew install cbmc</code>.
+Note that at the time of writing, however, CBMC installation through Homebrew</li>
+<li>On Ubuntu Linux, CBMC can be installed through <code>apt-get</code> using <code>apt-get install cbmc</code>.</li>
+<li>For other platforms,</li>
+</ul>
+<h2 id="basics">Basics</h2>
+<p>To test C functions, one might identify a set of <em>test vectors</em> — suitably chosen inputs with known good outputs — feeding the inputs from the test vectors to the function under tests and observing the output of the function in response to this stimulus.
+Note, however, that for most functions of interest constructing an exhaustive set of test vectors to test functions in this way is infeasible: there are simply too many different vectors that would need to be constructed.</p>
+<p>Using CBMC, we can take this idea of
+uses <em>nondeterministic values</em> that can be used to model interaction with the outside world or can be used to check that a property holds for arbitrary values of a given type.
+To begin, we&rsquo;ll declare (but not define) the following function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nondet_int</span>(<span style="color:#66d9ef">void</span>);
+</code></pre></div><p>Functions whose name begins with the <code>nondet_</code> prefix in CBMC are treated specially by the tool, and are use to generate the aforementioned nondeterministic values — in this case, an <code>int</code>.
+Nondeterministically chosen integers are completely arbitrary: there are no constaints on their value, other than those that we choose to impose on them.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define ASSERT(cond, name) { __CPROVER_assert(cond, name); }
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">property0</span>() {
+  <span style="color:#66d9ef">int</span> arbitrary <span style="color:#f92672">=</span> nondet_int();
+
+  ASSERT(arbitrary <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;property 0&#34;</span>);
+}
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">property1</span>() {
+  <span style="color:#66d9ef">int</span> arbitrary <span style="color:#f92672">=</span> nondet_int();
+
+  ASSERT(arbitrary <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;property 1&#34;</span>);
+} 
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">property2</span>() {
+  <span style="color:#66d9ef">int</span> arbitrary <span style="color:#f92672">=</span> nondet_int();
+
+  ASSUME(arbitrary <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>);
+
+  ASSERT(arbitrary <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;property 2&#34;</span>);
+}
+</code></pre></div>
         </p>
     </div>
     

@@ -63,12 +63,12 @@
     </item>
     
     <item>
-      <title>Cbmc Introduction</title>
+      <title>Verifying C code with CBMC: an introduction</title>
       <link>https://dominicpm.github.io/posts/cbmc-introduction/</link>
-      <pubDate>Wed, 28 Apr 2021 11:03:09 +0100</pubDate>
+      <pubDate>Wed, 28 Apr 2021 19:17:38 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/posts/cbmc-introduction/</guid>
-      <description></description>
+      <description>Introduction The C programming language is all-pervasive, especially in contexts where performance or direct interaction with hardware is necessary. It&amp;rsquo;s therefore probably not a surprise that Arm — as a hardware design company — produces lots of C code: we have teams working on Linux kernel enablement for our architecture, we produce our own operating systems and security monitors, we produce our own TLS library, and so on and so forth.</description>
     </item>
     
     <item>
