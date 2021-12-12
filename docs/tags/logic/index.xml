@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logic on Dominic Mulligan</title>
+    <link>https://dominicpm.github.io/tags/logic/</link>
+    <description>Recent content in logic on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <lastBuildDate>Sat, 27 Nov 2021 19:20:37 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/logic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explicit support for foundational pluralism</title>
+      <link>https://dominicpm.github.io/posts/explicit-support-for-foundational-pluralism/</link>
+      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/explicit-support-for-foundational-pluralism/</guid>
+      <description>Nearly all working mathematicians make extensive use of non-constructive, classical reasoning principles including the Law of the Excluded Middle and the Axiom of Choice in their day-to-day work. Interestingly, despite mostly working classically, mathematicians are able to &amp;ldquo;drop down&amp;rdquo; into restricted modes of reasoning — a purely-constructive mode, or a mode where Excluded Middle is permissible but the Axiom of Choice is not, for example — where and when the need arises.</description>
+    </item>
+    
+  </channel>
+</rss>

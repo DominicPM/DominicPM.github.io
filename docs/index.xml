@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 14:14:54 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 14:31:16 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All papers moved from previous homepage</title>
+      <link>https://dominicpm.github.io/posts/all-papers-moved/</link>
+      <pubDate>Sun, 12 Dec 2021 14:31:16 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/all-papers-moved/</guid>
+      <description>I am pleased to announce that electronic copies of all of my papers have now been moved over from my old website and can be found under &amp;ldquo;Publications&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Explicit support for foundational pluralism</title>
+      <link>https://dominicpm.github.io/posts/explicit-support-for-foundational-pluralism/</link>
+      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/explicit-support-for-foundational-pluralism/</guid>
+      <description>Nearly all working mathematicians make extensive use of non-constructive, classical reasoning principles including the Law of the Excluded Middle and the Axiom of Choice in their day-to-day work. Interestingly, despite mostly working classically, mathematicians are able to &amp;ldquo;drop down&amp;rdquo; into restricted modes of reasoning — a purely-constructive mode, or a mode where Excluded Middle is permissible but the Axiom of Choice is not, for example — where and when the need arises.</description>
+    </item>
+    
+    <item>
+      <title>Supervisionary: the idea</title>
+      <link>https://dominicpm.github.io/posts/supervisionary-the-idea/</link>
+      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/supervisionary-the-idea/</guid>
+      <description>Nick Spinale and I recently submitted a short talk abstract to the Principles of Secure Compilation (PriSC) workshop, co-located with POPL 2022. The abstract, which was thankfully accepted for presentation, describes some ideas that Nick and I have been discussing for a while. I&amp;rsquo;ll use this post to flesh the abstract out and explain the design of the prototype Supervisionary proof-checking system which Nick and I have been working on.</description>
+    </item>
+    
     <item>
       <title>Accepted PriSC 2022 workshop paper</title>
       <link>https://dominicpm.github.io/posts/prisc-2022-paper/</link>

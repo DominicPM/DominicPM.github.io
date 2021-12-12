@@ -7,22 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 14:14:54 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 14:31:16 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>supervisionary</title>
-      <link>https://dominicpm.github.io/tags/supervisionary/</link>
-      <pubDate>Fri, 26 Nov 2021 14:14:54 +0000</pubDate>
+      <title>site-administration</title>
+      <link>https://dominicpm.github.io/tags/site-administration/</link>
+      <pubDate>Sun, 12 Dec 2021 14:31:16 +0000</pubDate>
       
-      <guid>https://dominicpm.github.io/tags/supervisionary/</guid>
+      <guid>https://dominicpm.github.io/tags/site-administration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logic</title>
+      <link>https://dominicpm.github.io/tags/logic/</link>
+      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/logic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>verification</title>
       <link>https://dominicpm.github.io/tags/verification/</link>
-      <pubDate>Fri, 26 Nov 2021 14:14:54 +0000</pubDate>
+      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/tags/verification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supervisionary</title>
+      <link>https://dominicpm.github.io/tags/supervisionary/</link>
+      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/supervisionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>veracruz</title>
+      <link>https://dominicpm.github.io/tags/veracruz/</link>
+      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wasm</title>
+      <link>https://dominicpm.github.io/tags/wasm/</link>
+      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/wasm/</guid>
       <description></description>
     </item>
     
@@ -41,15 +77,6 @@
       <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/tags/oc3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>veracruz</title>
-      <link>https://dominicpm.github.io/tags/veracruz/</link>
-      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
       <description></description>
     </item>
     
@@ -95,15 +122,6 @@
       <pubDate>Tue, 27 Apr 2021 23:11:54 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/confidential-compute/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>site-administration</title>
-      <link>https://dominicpm.github.io/tags/site-administration/</link>
-      <pubDate>Wed, 05 Aug 2020 16:21:05 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/site-administration/</guid>
       <description></description>
     </item>
     
