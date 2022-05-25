@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 13:59:39 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/confidential-computing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 10:55:14 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/confidential-computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New technical report on the Icecap and Veracruz projects</title>
+      <link>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</link>
+      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</guid>
+      <description>I am delighted to announce the recent release of an Arm Research technical report on the IceCap and Veracruz confidential-computing projects. The report, &amp;ldquo;Private delegated computations using strong isolation&amp;rdquo;, is co-authored by Mathias Brossard, Guilhem Bryant, Basma El Gaabouri, Xinxin Fan, Alexandre Ferreira, Edmund Grimley-Evans, Christopher Haster, Evan Johnson, Derek Miller, Fan Mo, Nick Spinale, Eric van Hensbergen, Hugo J. M. Vincent, Shale Xiong, and me.</description>
+    </item>
+    
     <item>
       <title>OC3 programme committee invite</title>
       <link>https://dominicpm.github.io/posts/oc3-programme-committee/</link>

@@ -111,7 +111,7 @@
 	<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
 	<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
 
-	<script src="https://dominicpm.github.io/js/main.min.c1aee25a817e9beb1f9c4afd9d62311227a7f5e46720e404dc1dda97281f47f2.js" integrity="sha256-wa7iWoF+m+sfnEr9nWIxEien9eRnIOQE3B3alygfR/I=" crossorigin="anonymous"></script>
+	<script src="https://dominicpm.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js" integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin="anonymous"></script>
 </footer>
 </nav>
 
@@ -140,8 +140,8 @@ First, choice in HOL immediately implies the Law of the Excluded Middle via a va
 As a result, once choice is introduced we&rsquo;re essentially fully commited to a wholly classical foundation, and once you&rsquo;ve made that commitment, you may as well make use of it.
 <em>Everywhere</em>.
 To wit, there&rsquo;s no real way to stop most of Isabelle/HOL&rsquo;s automation and proof-search facilities using classical reasoning when attempting to close an open goal in pursuit of a proof.
-Indeed, there&rsquo;s no way of discovering whether the proof of an Isabelle/HOL theorem depends, in some essential way, on choice or excluded middle, though it&rsquo;s probably safe to assume that most do — even very basic concepts in the Isabelle/HOL standard library, such as the if-then-else eliminator for $Bool$, are defined using a choice operator.
-Note that I&rsquo;m focussing on Isabelle/HOL here as it&rsquo;s the system with which I am most familiar — there&rsquo;s nothing specific to Isabelle/HOL in what I&rsquo;m saying, and I think these observations hold for HOL implementations in general.</p>
+Indeed, there&rsquo;s no way of discovering whether the proof of an Isabelle/HOL theorem depends, in some essential way, on choice or excluded middle, though it&rsquo;s probably safe to assume that most do — even very basic concepts in the Isabelle/HOL standard library, such as the if-then-else eliminator for $Bool$, are defined using a choice operator.</p>
+<p><em>Note that I&rsquo;m focussing on Isabelle/HOL here as it&rsquo;s the system with which I am most familiar — there&rsquo;s nothing specific to Isabelle/HOL in what I&rsquo;m saying, and I think these observations hold for HOL implementations in general</em>.</p>
 <p>But, is this really a problem in practice?
 After all, the Isabelle/HOL standard library and the associated <a href="https://isa-afp.org">Archive of Formal Proofs</a> shows that a wide range of mathematical content can be formalized in HOL, so what are we really losing out on, concretely?
 One <em>interesting</em> bit of mathematics that is hard to formalize in Isabelle/HOL, as is, is <a href="https://en.wikipedia.org/wiki/Smooth_infinitesimal_analysis">Smooth Infinitesimal Analysis</a> (or SIA, henceforth) — indeed, it was thinking about how SIA can be formalized in Isabelle/HOL which was the genesis for what I will present below.</p>
@@ -153,25 +153,28 @@ Interestingly, however, if we restrict ourselves to using only intuitionistic re
 As a result, we can take the set of nilpotents as our set of infinitesimals and, along with some axioms constraining the behaviour of arbitrary functions $f : \mathbb{R} \rightarrow \mathbb{R}$, develop infintesimal analysis.</p>
 <p>Yet, as hinted above, if trying to formalize SIA in Isabelle/HOL, we are immediately hit with a problem: there&rsquo;s no real way of stopping everything collapsing into a triviality.
 Instead, it seems the best that we can do is to first embed intuitionistic logic into HOL and then develop SIA inside that embedding — a kind of proof-assistant within a proof-assistant, which is clearly unsatisfatory.</p>
-<h3 id="a-higher-order-logic-with-a-taint-system">A higher-order logic with a taint system</h3>
-<p>So, what can be done?
-Essentially, I&rsquo;m going to introduce a logic that looks a lot like HOL — taking that logic as a base — but is modified in a few minor but important ways.</p>
+<p>So, what can be done?</p>
+<p>Essentially, in what follows, I&rsquo;m going to introduce a logic that looks a lot like HOL — taking that logic as a base — but is modified in a few minor but important ways.
+The most important change will be the introduction of <em>taint-labels</em>, which I will use to track the <em>foundational</em> axioms used in a proof.
+Interestingly, these taint-labels have an internal lattice-like structure, which captures implications between foundational axioms that introduce them into proofs.
+Even more interestingly, as discussed further below, these taint-labels appear to be an analogue of the classification labels of <a href="https://en.wikipedia.org/wiki/Security_type_system">security type systems</a> for programming languages.</p>
+<h3 id="kinds-types-and-terms">Kinds, types, and terms</h3>
 <p>First, I&rsquo;ll define <strong>kinds</strong> by the following recursive grammar, where $\star$ is the kind of types:</p>
 <p>$
 \begin{gathered}
-\kappa, \kappa', \kappa'' ::= \star \mid \star \rightarrow \kappa
+\kappa, \kappa&rsquo;, \kappa&rsquo;&rsquo; ::= \star \mid \star \rightarrow \kappa
 \end{gathered}
 $</p>
 <p>The <strong>type</strong> language of the logic remains similar to the polymorphic simple-types of HOL, and is described by the following recursive grammar:</p>
 <p>$
 \begin{gathered}
-\tau, \tau', \tau'' ::= \alpha \mid T_\kappa \mid \tau'\tau
+\tau, \tau&rsquo;, \tau&rsquo;&rsquo; ::= \alpha \mid T_\kappa \mid \tau&rsquo;\tau
 \end{gathered}
 $</p>
-<p>Here, $\alpha$ ranges arbitrarily over a countably infinite set of <strong>type-variables</strong>, and application $\tau'\tau$ associates to the left.
+<p>Here, $\alpha$ ranges arbitrarily over a countably infinite set of <strong>type-variables</strong>, and application $\tau&rsquo;\tau$ associates to the left.
 Moreover, to each kind $\kappa$, I assume a countably infinite set of <strong>type-formers</strong> of that kind.
 Note that kinds are isomorphic to the natural numbers, and will be primarily used to describe the <strong>arity</strong> of a type-former, that is, how many type arguments it must be applied to in order to create a type.
-If $\kappa \neq \kappa'$ then there is no particular connection between $T_\kappa$ and $T_{\kappa'}$ — though I will try to avoid confusing name clashes, throughout.</p>
+If $\kappa \neq \kappa&rsquo;$ then there is no particular connection between $T_\kappa$ and $T_{\kappa&rsquo;}$ — though I will try to avoid confusing name clashes, throughout.</p>
 <p>Henceforth, I will only ever work with well-formed types, where every type-former is maximally-applied.
 To capture this, I introduce a <strong>type kinding</strong> relation, $\tau : \kappa$, with the following rules:</p>
 <p>$
@@ -180,130 +183,179 @@ To capture this, I introduce a <strong>type kinding</strong> relation, $\tau : \
 \quad
 \cfrac{}{T_\kappa : \kappa}
 \quad
-\cfrac{\tau : \star \rightarrow \kappa \quad \tau : \star}{\tau'\tau : \kappa}
+\cfrac{\tau : \star \rightarrow \kappa \quad \tau : \star}{\tau&rsquo;\tau : \kappa}
 \end{gathered}
 $</p>
-<p>Note that this relation satisfies a number of properties, including <em>unicity</em> in the sense that $\tau : \kappa$ and $\tau : \kappa'$ implies $\kappa = \kappa'$.
-Additionally, I will write $ftv(\tau)$ to denote the set of type-variables of the term $\tau$, and write $\tau[\alpha ::= \tau']$ to denote the <strong>substitution</strong> of all occurrences of $\alpha$ for $\tau'$ in the type $\tau$.
-Then, if $\tau : \kappa$ and $\tau' : \star$ then $\tau[\alpha := \tau'] : \kappa$ and moreover $ftv(\tau[\alpha ::= \tau']) \subseteq ftv(\tau) \cup ftv(\tau')$.</p>
-<p>I will assume two type-formers as <em>primitive</em>, built into the logic itself:</p>
+<p>I will write $\tau : \kappa$ to assert that a derivation tree, rooted at $\tau : \kappa$, and constructed according to the rules above, exists.
+Note that this relation satisfies a number of properties:</p>
+<p><strong>Lemma (unicity of kinding)</strong>: If $\tau : \kappa$ and $\tau : \kappa&rsquo;$ then $\kappa = \kappa&rsquo;$.</p>
+<p>Additionally, I will write $ftv(\tau)$ to denote the <strong>set of type-variables</strong> of the term $\tau$, and write $\tau[\alpha ::= \tau&rsquo;]$ to denote the <strong>substitution</strong> of all occurrences of $\alpha$ for $\tau&rsquo;$ in the type $\tau$.
+Then:</p>
+<p><strong>Lemma</strong>: If $\tau : \kappa$ and $\tau&rsquo; : \star$ then $\tau[\alpha := \tau&rsquo;] : \kappa$.</p>
+<p><strong>Lemma</strong>: $ftv(\tau[\beta ::= \tau&rsquo;]) \subseteq (ftv(\tau) - \{\beta\}) \cup ftv(\tau&rsquo;)$.</p>
+<p>I will need to assume two type-formers as <em>primitive</em>, built into the logic itself, in order to develop the rest of the material below:</p>
 <ul>
-<li>The propositional type, $Prop$, at kind $\star$,</li>
-<li>The function space arrow, $\rightarrow$, at kind $\star \rightarrow \star \rightarrow \star$.</li>
+<li>The <strong>propositional type</strong>, $Prop$, at kind $\star$,</li>
+<li>The <strong>function space arrow</strong>, $\rightarrow$, at kind $\star \rightarrow \star \rightarrow \star$.</li>
 </ul>
-<p>Note here that, compared to HOL, there is one minor but symbolic change: the distinguished Boolean type of HOL is now renamed to to $Prop$.</p>
+<p>Note that, for ease of reading, instead of writing $(\rightarrow \tau)\tau&rsquo;$, I will use the standard mathematical convention and write $\tau \rightarrow \tau&rsquo;$.
+Moreover, the function space arrow will be assumed to associate to the right, so we can right $\tau \rightarrow \tau&rsquo; \rightarrow \tau&rsquo;&rsquo;$ instead of $\tau \rightarrow (\tau&rsquo; \rightarrow \tau&rsquo;&rsquo;)$.
+From this, we obviously therefore have the following two derived kinding rules:</p>
+<p>$
+\begin{gathered}
+\cfrac{}{Prop : \star}
+\quad
+\cfrac{\tau : \star \quad \tau&rsquo; : \star}{\tau \rightarrow \tau&rsquo; : \star}
+\end{gathered}
+$</p>
+<p>Observe here that — compared to HOL — there is one minor but symbolic change: the distinguished Boolean type of HOL is now renamed to to $Prop$.</p>
 <p>In HOL, the $Bool$ type serves a dual purpose, in both identifying formulae and acting as the two-element datatype.
 Henceforth — at least in some circumstances — these two roles are going to be separated: $Prop$ will be used to identify formulae, whilst $Bool$ can be introduced later as a two-element datatype, like any other.
 (I will come back to the subject of data.)
 In this way, formulae of this new logic are identified with well-typed terms that inhabit the $Prop$ type, and we will use Greek letters like $\phi$ and $\psi$ to suggest that terms are formulae.</p>
-<p>Henceforth, instead of writing $(\rightarrow \tau)\tau'$ I will use standard mathematical conventions, using the infix notation $\tau \rightarrow \tau'$.</p>
-<p>Like HOL, the term language of the logic remains the simply-typed $\lambda$-calculus, with constants, defined by the following recursive grammar:</p>
+<p>To each type, $\tau$, I assume a countably infinite set of <strong>variables</strong> and <strong>constants</strong>.
+I will write $x_{\tau}$ to refer to the variable $x$ associated with type $\tau$, and write $C_\tau$ for the constant similarly associated with type $\tau$.
+Again, whenever $\tau \neq \tau&rsquo;$ there is no particular connection between $x_\tau$ and $x_{\tau&rsquo;}$, and between $C_\tau$ and $C_{\tau&rsquo;}$, and I will generally work to avoid introducing confusing name clashes in this way.</p>
+<p>Like HOL, the <strong>term language</strong> of the logic remains the terms of the simply-typed $\lambda$-calculus, extended with constants.
+Terms are therefore defined by the following recursive grammar:</p>
 <p>$
 \begin{gathered}
 r,s,t ::= x_\tau \mid C_\tau \mid rs \mid \lambda{x_\tau}.r
 \end{gathered}
 $</p>
-<p>To each type, $\tau$, I assume a countably infinite set of <strong>variables</strong> and <strong>constants</strong>.
-I will write $x_{\tau}$ to refer to the variable $x$ associated with type $\tau$, and write $C_\tau$ for the constant similarly associated with type $\tau$.
-Again, whenever $\tau \neq \tau'$ there is no particular connection between $x_\tau$ and $x_{\tau'}$, and $C_\tau$ and $C_{\tau'}$.</p>
-<p>I work with terms identified upto $\alpha$-equivalence, that is, a permutative renaming of their bound variables.
-Additionally, henceforth, I will generally work with well-typed terms.
-In pursuit of this, I introduce a <strong>term typing</strong> relation, with the following rules:</p>
+<p>I work with terms identified upto $\alpha$-equivalence — that is, a permutative renaming of their bound variables.
+Additionally, it will also generally be the case that I only work with well-typed terms.
+In pursuit of this, I introduce a <strong>term typing</strong> relation, defined by the following rules:</p>
 <p>$
 \begin{gathered}
 \cfrac{}{x_\tau : \tau}
 \quad
 \cfrac{}{C_\tau : \tau}
 \quad
-\cfrac{r : \tau \rightarrow \tau' \quad s : \tau}{rs : \tau'}
+\cfrac{r : \tau \rightarrow \tau&rsquo; \quad s : \tau}{rs : \tau&rsquo;}
 \quad
-\cfrac{r : \tau'}{\lambda{x_\tau}.r : \tau \rightarrow \tau'}
+\cfrac{r : \tau&rsquo;}{\lambda{x_\tau}.r : \tau \rightarrow \tau&rsquo;}
 \end{gathered}
 $</p>
-<p>Note that if $r : \tau$ then $\tau : \star$, and if $r : \tau$ and $r : \tau'$ then $\tau = \tau'$.</p>
-<p>I will assume the standard gamut of logical connectives and quantifiers, captured as appropriately-typed constants (though I will generally suppress the types for readability&rsquo;s sake): $\top$, $\bot$, $\exists$, $\forall$, $=$, $\longrightarrow$, $\neg$, $\wedge$, and $\vee$ — though, note the conspicuous lack of any Hilbert-style choice operator, like the previously-discussed $\epsilon$, another subject which I&rsquo;ll come back to.
-I&rsquo;ll also adopt the usual mathematical typographical conventions when rendering connectives, for example writing $r = s$ and $\exists$$x_{\tau}$. $\phi$ instead of $(= r)s$ and $\exists$ ($\lambda$$x_{\tau}$. $\phi$), respectively.</p>
-<p>Next, to enforce a separation between the intuitionistic and classical <em>worlds</em>, I will take a familiar two-place Natural Deduction relation — $\Gamma$ $\vdash$ $\phi$, between a context of assumptions and a formula — and extend it to a <em>three</em>-place relation, $\Gamma$ $\vdash$ $\phi$ : $\ell$.
-Here, $\ell$ ranges arbitrarily over a set of <em>taint-labels</em>, $\mathcal{L}$, and for the time being I will assume the existence of two distinguished and suggestively-named labels, $\mathcal{C}$ and $\mathcal{I}$, though more will be introduced later.</p>
+<p>I will write $r : \tau$ to assert that a derivation tree, rooted at $r : \tau$, and constructed using the rules above, exists.
+Note that this relation satisfies a number of properties:</p>
+<p><strong>Lemma (unicity of typing)</strong>: if $r : \tau$ and $r : \tau&rsquo;$ then $\tau = \tau&rsquo;$.</p>
+<p><strong>Lemma</strong>: if $r : \tau$ then $\tau : \star$.</p>
+<p>Moreover, I will write $fv(r)$ to denote the set of <strong>free variables</strong> of the term $r$, $ftv(r)$ to denote the set of <strong>type-variables</strong> appearing in the term $r$, $r[x_\tau \mapsto t]$ for the <strong>capture-avoiding substitution</strong> which replaces all free-occurrences of $x_\tau$ for $t$ in $r$, and lastly writing $r[\alpha \mapsto \tau]$ for the obvious extension of the <strong>type-substitution</strong> to terms.
+We then have the following standard properties of these operations:</p>
+<p><strong>Lemma</strong>: $fv(r[x_\tau \mapsto t]) \subseteq (fv(r) - \{x_\tau\}) \cup fv(t)$</p>
+<p><strong>Lemma</strong>: $ftv(r[\alpha \mapsto \tau]) \subseteq (ftv(r) - \{\alpha\}) \cup ftv(\tau)$</p>
+<p><strong>Lemma</strong>: $fv(r[\alpha \mapsto \tau]) = fv(r)$</p>
+<p><strong>Lemma (Barendregt&rsquo;s substitution lemma)</strong>: if $x_\tau \notin fv(s)$ and $x_\tau \neq y_{\tau&rsquo;}$ then $r[x_\tau \mapsto t][y_{\tau&rsquo;} \mapsto s] = r[y_{\tau&rsquo;} \mapsto s][x_\tau \mapsto t[y_{\tau&rsquo;} \mapsto s]]$.</p>
+<p><strong>Lemma</strong>: if $x_\tau \notin fv(r)$ then $r[x_\tau \mapsto t] = r$.</p>
+<p><strong>Lemma</strong>: if $\alpha \notin ftv(r)$ then $r[\alpha \mapsto \tau] = r$.</p>
+<p><strong>Lemma</strong>: $r[\alpha \mapsto \alpha] = r$ and $r[x_\tau \mapsto x_\tau] = r$.</p>
+<p><strong>Lemma</strong>: $r[x_\tau \mapsto t][\beta \mapsto \tau&rsquo;] = r[\beta \mapsto \tau&rsquo;][x_{\tau[\beta \mapsto \tau&rsquo;]} \mapsto t[\beta \mapsto \tau&rsquo;]]$</p>
+<p><strong>Lemma</strong>: if $r : \tau$ then $r[\beta \mapsto \tau&rsquo;] : \tau[\beta \mapsto \tau&rsquo;]$.</p>
+<p><strong>Lemma</strong>: if $r : \tau$ and $s : \tau&rsquo;$ then $r[y_{\tau&rsquo;} \mapsto s] : \tau$.</p>
+<p>Throughout, I will assume the standard gamut of logical connectives and quantifiers, captured as appropriately-typed constants:</p>
+<ul>
+<li>Truth and falsity, $\top$ and $\bot$, at type $Prop$,</li>
+<li>Logical negation, $\neg$, at type $Prop \rightarrow Prop$,</li>
+<li>Conjunction, disjunction, and implication, $\wedge$, $\vee$ and $\longrightarrow$, at type $Prop \rightarrow Prop \rightarrow Prop$,</li>
+<li>Equality, $=$, at type $\alpha \rightarrow \alpha \rightarrow Prop$,</li>
+<li>Existential and universl quantification, $\exists$ and $\forall$, at type $(\alpha \rightarrow Prop) \rightarrow Prop$.</li>
+</ul>
+<p>(Note the conspicuous lack of any Hilbert-style choice operator, like the previously-discussed $\epsilon$, another subject which I&rsquo;ll come back to.)</p>
+<p>I&rsquo;ll also adopt the usual mathematical typographical conventions when rendering connectives, for example writing $r = s$ and $\exists{x_{\tau}}. \phi$ instead of $(= r)s$ and $\exists$ ($\lambda{x_{\tau}}. \phi$), respectively.
+Note also that I will tend to suppress the explicit type annotations of the constants, especially for the polymorphic constants, preferring to simply write $\forall$ instead of $\forall[\alpha \mapsto \tau]$, and similar.</p>
+<h3 id="natural-deduction">Natural Deduction</h3>
+<p>Call a finite set of terms a <strong>context</strong>, and call a context <strong>well-formed</strong>, and write $\Gamma \text{ wf}$, whenever $\phi : Prop$ for every $\phi \in \Gamma$.
+I will use $\Gamma$, $\Gamma&rsquo;$, $\Gamma&rsquo;&rsquo;$, and so on, to range arbitrarily over contexts.
+Writing $\{\}$ for the empty context, we have:</p>
+<p><strong>Lemma</strong>: $\{\} \text{ wf}$</p>
+<p><strong>Lemma</strong>: if $\Gamma \text{ wf}$ and $\Gamma&rsquo; \text{ wf}$ then $(\Gamma \cup \Gamma&rsquo;) \text{ wf}$.</p>
+<p><strong>Lemma</strong>: if $\Gamma \text{ wf}$ and $\Gamma&rsquo; \subseteq \Gamma$ then $\Gamma&rsquo; \text{ wf}$.</p>
+<p>Moreover, I will write $\Gamma[\alpha \mapsto \tau]$ and $\Gamma[x_\tau \mapsto t]$ for the <strong>pointwise extension</strong> of the <strong>type-substitution</strong> and <strong>capture-avoiding substitution</strong> actions to contexts.
+In light of this, note that:</p>
+<p><strong>Lemma</strong>: if $\Gamma \text{ wf}$ and $\tau : \star$ then $\Gamma[\alpha \mapsto \tau] \text{ wf}$.</p>
+<p><strong>Lemma</strong>: if $\Gamma \text{ wf}$ and $t : \tau$ then $\Gamma[x_\tau \mapsto t] \text{ wf}$.</p>
+<p>To enforce a separation between the intuitionistic and classical <em>worlds</em>, I will take a familiar two-place Natural Deduction relation — $\Gamma$ $\vdash$ $\phi$, between a context of assumptions and a formula — and extend it to a <em>three</em>-place relation, $\Gamma$ $\vdash$ $\phi$ : $\ell$.
+Here, $\ell$ ranges arbitrarily over a set of <strong>taint-labels</strong>, $\mathcal{L}$.
+For the time being I will assume the existence of two distinguished and suggestively-named labels: $\mathcal{C}$ and $\mathcal{I}$.
+Note that more labels will be introduced later.</p>
 <p>Essentially, the idea is that, when constructing a proof, taint-labels are introduced by instances of any axioms used and are consequently &ldquo;bubbled up&rdquo; through the proof via the logic&rsquo;s inference rules.
-To accommodate this, inference rules associated with a connective must be <em>enlightened</em> to properly handle taint-labels.
+To accommodate this, inference rules associated with a connective must be modified slightly to properly handle taint-labels.
 This step will require some additional machinery, which will be introduced below.
-First, though, I will introduce the axioms:</p>
+At this point, however, I will introduce the axioms of the Natural Deduction relation.
+We have:</p>
 <p>The <strong>Start</strong> axiom, which allows us to work from any assumption appearing in our context, $\Gamma$:</p>
 <p>$
 \begin{gathered}
-\cfrac{(\phi \in \Gamma)}{\Gamma \vdash \phi : \mathcal{I}}
+\cfrac{(\Gamma \text{ wf} \quad \phi \in \Gamma)}{\Gamma \vdash \phi : \mathcal{I}}
 \end{gathered}
 $</p>
 <p>The <strong>Truth Introduction</strong> axiom, which allows us to unconditionally prove $\top$, the truth constant.
 Note that the axiom introduces the $\mathcal{I}$ label, as truth is intuitionistically provable:</p>
 <p>$
 \begin{gathered}
-\cfrac{}{\Gamma \vdash \top : \mathcal{I}}
+\cfrac{(\Gamma \text{ wf})}{\Gamma \vdash \top : \mathcal{I}}
 \end{gathered}
 $</p>
 <p>The <strong>Excluded Middle</strong> axiom.
 Note that the axiom introduces the $\mathcal{C}$ label, as its use means we are working classically:</p>
 <p>$
 \begin{gathered}
-\cfrac{}{\Gamma \vdash \phi \vee \neg\phi : \mathcal{C}}
+\cfrac{(\Gamma \text{ wf})}{\Gamma \vdash \phi \vee \neg\phi : \mathcal{C}}
 \end{gathered}
 $</p>
 <p>The <strong>Reflexivity</strong> axiom, which allows us to unconditionally prove that any term is equal to itself.
 Note that this axiom also introduces the $\mathcal{I}$ label, as this is also provable, intuitionistically:</p>
 <p>$
 \begin{gathered}
-\cfrac{}{\Gamma \vdash r = r : \mathcal{I}}
+\cfrac{(\Gamma \text{ wf} \quad r : \tau)}{\Gamma \vdash r = r : \mathcal{I}}
 \end{gathered}
 $</p>
 <p>The <strong>Beta</strong> axiom, which allows us to apply a function to an argument, substituting the argument into the body of the function.
-Here, $r[x_\tau \mapsto s]$ denotes the <em>capture-avoiding substitution</em> of occurences of $x_\tau$ for $s$ in the term $r$.
 Again, this axiom introduces the $\mathcal{I}$ label:</p>
 <p>$
 \begin{gathered}
-\cfrac{}{\Gamma \vdash (\lambda{x_{\tau}}. r)s = r[x_{\tau} \mapsto s] : \mathcal{I}}
+\cfrac{(\Gamma \text{ wf} \quad (\lambda{x_{\tau}}. r)s : \tau&rsquo;)}{\Gamma \vdash (\lambda{x_{\tau}}. r)s = r[x_{\tau} \mapsto s] : \mathcal{I}}
 \end{gathered}
 $</p>
 <p>The <strong>Eta</strong> axiom, which introduces <em>extensionality</em> into the logic.
 Again, this axiom introduces the $\mathcal{I}$ label:</p>
 <p>$
 \begin{gathered}
-\cfrac{(x_{\tau} \notin fv(f))}{\Gamma \vdash (\lambda{x_{\tau}}. f x) = f : \mathcal{I}}
+\cfrac{(\Gamma \text{ wf} \quad f : \tau \rightarrow \tau&rsquo; \quad x_{\tau} \notin fv(f))}{\Gamma \vdash (\lambda{x_{\tau}}. f x) = f : \mathcal{I}}
 \end{gathered}
 $</p>
-<p>Next, to define the inference rules, I first assume a binary operation, $- \sqcup -$, on the set $\mathcal{L}$ and define an equational theory over elements of this set, $\ell$ $\equiv$ 𝑚:</p>
+<p>Next, to define the inference rules, I first fix a binary operation, $- \sqcup -$, on the set of taint-labels, $\mathcal{L}$, and define an <strong>equational theory</strong> over elements of this set, $\ell$ $\equiv$ $\ell&rsquo;$:</p>
 <p>$
 \begin{gathered}
 \cfrac{}{\ell \equiv \ell}
 \quad
 \cfrac{}{\ell \sqcup \ell \equiv \ell}
 \quad
-\cfrac{\ell \equiv 𝑚}{𝑚 \equiv \ell}
+\cfrac{\ell \equiv \ell&rsquo;}{\ell&rsquo; \equiv \ell}
 \quad
-\cfrac{\ell \equiv 𝑚 \quad 𝑚 \equiv 𝑛}{\ell \equiv 𝑛}
-\quad
-\cfrac{\ell_1 \equiv \ell_2 \quad 𝑚_1 \equiv 𝑚_2}{\ell_1 \sqcup 𝑚_1 \equiv \ell_2 \sqcup 𝑚_2}
+\cfrac{\ell \equiv \ell&rsquo; \quad \ell&rsquo; \equiv \ell&rsquo;&rsquo;}{\ell \equiv \ell&rsquo;&rsquo;}
 \newline
+\cfrac{\ell_1 \equiv \ell_2 \quad \ell&rsquo;_1 \equiv \ell&rsquo;_2}{\ell_1 \sqcup \ell&rsquo;_1 \equiv \ell_2 \sqcup \ell&rsquo;_2}
+\quad
 \cfrac{}{\mathcal{C} \sqcup \ell \equiv \mathcal{C}}
 \quad
 \cfrac{}{\mathcal{I} \sqcup \ell \equiv \ell}
 \end{gathered}
 $</p>
+<p>I will write $\ell \equiv \ell&rsquo;$ to assert that a derivation tree exists, rooted at $\ell \equiv \ell&rsquo;$, and constructed according to the rules above.</p>
 <p>Note that this equational theory endows taint-labels with a <strong>join semilattice structure</strong>, under the binary operation $- \sqcup -$, with upper bound $\mathcal{C}$ and lower bound $\mathcal{I}$.
-With this, I define a derived ordering relation on taint-labels, and write $\ell \leq 𝑚$ to assert that $\ell \sqcup 𝑚 \equiv 𝑚$.
+With this, I define a derived ordering relation on taint-labels, and write $\ell \leq \ell&rsquo;$ to assert that $\ell \sqcup \ell&rsquo; \equiv \ell&rsquo;$.
 Immediately, we can see that this derived ordering is a <strong>partial ordering</strong> on taint-labels, again with least element $\mathcal{I}$ and greatest element $\mathcal{C}$.</p>
 <p>With this, the standard introduction and elimination rules are modified to gather the taint-labels appearing in their premisses and label their conclusion with their least upper bound.
-We have the following rules:</p>
-<p>The <strong>Symmetry</strong> rule which captures the symmetric nature of equality.
-Note that the taint-label of the premiss is preserved, passed down into the conclusion of the rule:</p>
+Writing $fv(\Gamma)$ for the set $\bigcup\{ fv(\phi) \mid \phi \in \Gamma \}$, we have the following rules:</p>
+<p>The <strong>Symmetry</strong> and <strong>Transitivity</strong> rules which capture the symmetric and transitive nature of equality, respectively.
+Note that the taint-labels of the premisses are either passed forward, unmodified, in rules with a single premiss, or otherwise combined together, using the $- \sqcup -$ operation on taint-labels, in the conclusion of multi-premiss rules.
+Essentially, this captures the fact that, if any premiss is established using some classical reasoning principle, the resulting proof will also be considered suitably classical, too:</p>
 <p>$
 \cfrac{\Gamma \vdash r = s : \ell}{\Gamma \vdash s = r : \ell}
-$</p>
-<p>The <strong>Transitivity</strong> rule which captures the transitivity of equality.
-Note that the taint-labels of the premisses are combined together, using the $- \sqcup -$ operation on taint-labels, in the conclusion of the rule.
-Essentially, this captures the fact that, if either premiss is established using some classical reasoning principle, the resulting proof will also be considered suitably classical, too:</p>
-<p>$
-\cfrac{\Gamma \vdash r = s : \ell \quad \Delta \vdash s = t : 𝑚}{\Gamma ∪ \Delta \vdash r = t : \ell \sqcup 𝑚}
+\quad
+\cfrac{\Gamma \vdash r = s : \ell \quad \Delta \vdash s = t : \ell&rsquo;}{\Gamma ∪ \Delta \vdash r = t : \ell \sqcup \ell&rsquo;}
 $</p>
 <p>The <strong>Type Substitution</strong> and <strong>Substitution</strong> rules, which allows us to monomorphise a polymorphic proof, and specialise the free variables of a proof, respectively:</p>
 <p>$
@@ -320,16 +372,16 @@ $</p>
 <p>The <strong>Application Congruence</strong> rule, which allows us to replace functions and arguments with provably-equal terms.
 Note that the side-condition ensures that the resulting applications are well-typed:</p>
 <p>$
-\cfrac{\Gamma \vdash f = g : \ell \quad \Delta \vdash r = s : 𝑚 \quad (f : \tau \rightarrow \tau', r : \tau)}{\Gamma \cup \Delta \vdash f(r) = g(s) : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash f = g : \ell \quad \Gamma&rsquo; \vdash r = s : \ell&rsquo; \quad (f : \tau \rightarrow \tau&rsquo;, r : \tau)}{\Gamma \cup \Gamma&rsquo; \vdash f(r) = g(s) : \ell \sqcup \ell&rsquo;}
 $</p>
-<p>The <strong>Falsity Elimination</strong> rule, which allows us to conclude <em>anything</em> from a proof of $\bot$, or false:</p>
+<p>The <strong>Falsity Elimination</strong> rule, which allows us to conclude <em>any</em> well-typed formula from a proof of $\bot$:</p>
 <p>$
-\cfrac{\Gamma \vdash \bot : \ell}{\Gamma \vdash \phi : \ell}
+\cfrac{\Gamma \vdash \bot : \ell \quad (\phi : Prop)}{\Gamma \vdash \phi : \ell}
 $</p>
 <p>The <strong>Conjunction Introduction</strong> and <strong>Left</strong> and <strong>Right Elimination</strong> rules:</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi : \ell \quad \Delta \vdash \psi : 𝑚}{\Gamma ∪ \Delta \vdash \phi \wedge \psi : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \phi : \ell \quad \Gamma&rsquo; \vdash \psi : \ell&rsquo;}{\Gamma ∪ \Gamma&rsquo; \vdash \phi \wedge \psi : \ell \sqcup $\ell&rsquo;$}
 \quad
 \cfrac{\Gamma \vdash \phi \wedge \psi : \ell}{\Gamma \vdash \phi : \ell}
 \quad
@@ -341,7 +393,7 @@ $</p>
 \begin{gathered}
 \cfrac{\Gamma ∪ \{\phi\} \vdash \psi : \ell}{\Gamma \vdash \phi \longrightarrow \psi : \ell}
 \quad
-\cfrac{\Gamma \vdash \phi \longrightarrow \psi : \ell \quad \Delta \vdash \phi : 𝑚}{\Gamma \cup \Delta \vdash \psi : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \phi \longrightarrow \psi : \ell \quad \Gamma&rsquo; \vdash \phi : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash \psi : \ell \sqcup \ell&rsquo;}
 \end{gathered}
 $</p>
 <p>The <strong>Negation Introduction</strong> and <strong>Elimination</strong> rules:</p>
@@ -349,13 +401,13 @@ $</p>
 \begin{gathered}
 \cfrac{\Gamma \cup \{\phi\} \vdash \bot : \ell}{\Gamma \vdash \neg\phi : \ell}
 \quad
-\cfrac{\Gamma \vdash \phi : \ell \quad \Delta \vdash \neg\phi : 𝑚}{\Gamma \cup \Delta \vdash \bot : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \phi : \ell \quad \Gamma&rsquo; \vdash \neg\phi : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash \bot : \ell \sqcup \ell&rsquo;}
 \end{gathered}
 $</p>
-<p>The <strong>Bi-implication Introduction</strong> and <strong>Left</strong> and <strong>Right Elimination</strong> rules:</p>
+<p>The <strong>Bi-implication Introduction</strong> and <strong>Left</strong> and <strong>Right Elimination</strong> rules (note that bi-implication is equality at type $Prop$):</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi \longrightarrow \psi : \ell \quad \Delta \vdash \psi \longrightarrow \phi : 𝑚}{\Gamma \cup \Delta \vdash \phi = \psi : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \phi \longrightarrow \psi : \ell \quad \Gamma&rsquo; \vdash \psi \longrightarrow \phi : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash \phi = \psi : \ell \sqcup \ell&rsquo;}
 \quad
 \cfrac{\Gamma \vdash \phi = \psi : \ell}{\Gamma \vdash \phi \longrightarrow \psi : \ell}
 \\
@@ -369,7 +421,7 @@ $</p>
 \quad
 \cfrac{\Gamma \vdash \psi : \ell}{\Gamma \vdash \phi \vee \psi : \ell}
 \\
-\cfrac{\Gamma \vdash \phi \vee \psi : \ell \quad \Gamma \cup \{\phi\} \vdash \xi : 𝑚 \quad \Gamma \cup \{\psi\} \vdash \xi : 𝑛}{\Gamma \vdash \xi : \ell \sqcup (𝑚 \sqcup 𝑛)}
+\cfrac{\Gamma \vdash \phi \vee \psi : \ell \quad \Gamma \cup \{\phi\} \vdash \xi : \ell&rsquo; \quad \Gamma \cup \{\psi\} \vdash \xi : \ell&rsquo;&rsquo;}{\Gamma \vdash \xi : \ell \sqcup (\ell&rsquo; \sqcup \ell&rsquo;&rsquo;)}
 \end{gathered}
 $</p>
 <p>The <strong>Universal Introduction</strong> and <strong>Elimination</strong> rules:</p>
@@ -385,55 +437,95 @@ $</p>
 \begin{gathered}
 \cfrac{\Gamma \vdash \phi[x_{\tau} \mapsto t] : \ell}{\Gamma \vdash \exists{x_{\tau}}. \phi : \ell}
 \quad
-\cfrac{\Gamma \vdash \exists{x_{\tau}}. \phi : \ell \quad \Gamma \cup {\phi[x_{\tau} \mapsto y_{\tau}]} \vdash \psi : 𝑚 \quad (x_{\tau} \notin fv(\Gamma))}{\Gamma \vdash \psi : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \exists{x_{\tau}}. \phi : \ell \quad \Gamma \cup {\phi[x_{\tau} \mapsto y_{\tau}]} \vdash \psi : \ell&rsquo; \quad (y_{\tau} \notin fv(\Gamma))}{\Gamma \vdash \psi : \ell \sqcup \ell&rsquo;}
 \end{gathered}
 $</p>
-<p>Note that many of these inference rules are redundant, and could be derived, admittedly.</p>
-<p>At this point, we now have two separate &ldquo;worlds&rdquo; within which a theorem may live: $\mathcal{I}$, rather obviously, carves out the purely-intuitionistic fragment of the logic, whilst $\mathcal{C}$, again rather obviously, demarcates the classical fragment.
+<p>Note that many of these inference rules are redundant, and could be derived, admittedly.
+Henceforth, I will write $\Gamma \vdash \phi : \ell$ to assert that a derivation tree exists, rooted at $\Gamma \vdash \phi : \ell$, and constructed using the rules described above, exists.</p>
+<p>If $\{\} \vdash \phi : \ell$ then call $\phi$ a <strong>theorem</strong>.
+At this point, we now have two separate &ldquo;worlds&rdquo; within which a theorem may live: $\mathcal{I}$, rather obviously, carves out the purely-intuitionistic fragment of the logic, whilst $\mathcal{C}$, again rather obviously, demarcates the classical fragment.
 Note that there are two ways of interpreting the taint-labels, depending on whether we are working <em>forwards</em> from axioms toward conclusions, or <em>backwards</em> from conclusions toward axioms, in a proof:</p>
 <ul>
-<li>For forwards proof, taint-labels are used to indelibly mark a proof whenever a classical reasoning principle is used, and moreover indelibly mark any other result that makes use of that proof.</li>
+<li>For forwards proof, taint-labels are used to indelibly mark the proof of a theorem whenever a classical reasoning principle is used, and moreover indelibly mark any other result that makes use of that proof.</li>
 <li>For backwards proof, taint-labels are used to create a limit on the types of reasoning principles that may be used when working backward.
 In the context of our taint-label semilattice, working backwards from $\Gamma \vdash \phi \wedge \psi : \mathcal{I}$ essentially constrains us to proving $\Gamma \vdash \phi : \mathcal{I}$ and $\Gamma \vdash \psi : \mathcal{I}$, as no other taint-label sits below $\mathcal{I}$ in the semilattice.</li>
 </ul>
-<p>However, thus far we have no way of making a purely-intuitionistic result usable from the classical fragment of our logic.
+<p>However, thus far, the two worlds within the logic are a little <em>too</em> separate, as we have no way of making a purely-intuitionistic result usable from the classical fragment of our logic.
 To handle this, I must introduce a <em>new</em> inference rule, the <strong>Embedding</strong> rule:</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi : \ell \quad (\ell \leq 𝑚)}{\Gamma \vdash \phi : 𝑚}
+\cfrac{\Gamma \vdash \phi : \ell \quad (\ell \leq \ell&rsquo;)}{\Gamma \vdash \phi : \ell&rsquo;}
 \end{gathered}
 $</p>
-<p>The <strong>Embedding</strong> rule, above, serves two purposes: first, it allows us to &ldquo;lift&rdquo; an intuitionistic result into the classical fragment of the logic, and secondly it also has the effect of ensuring that the Natural Deduction relation remains well-defined with respect to the equational theory on taint-labels.
-Note that this latter aspect is a direct corollary of the fact that $\ell \equiv 𝑚$ implies $\ell \leq 𝑚$.
-This can be expressed as a slightly-modified derived form of the <strong>Embedding</strong> inference rule, called the <strong>Well-Definedness</strong> rule, as follows:</p>
+<p>The <strong>Embedding</strong> rule, above, serves two purposes: first, it allows us to <em>lift</em> an intuitionistic result into the classical fragment of the logic, and secondly it also has the effect of ensuring that the Natural Deduction relation remains well-defined with respect to the equational theory on taint-labels.
+Note that this latter aspect is a direct corollary of the fact that $\ell \equiv \ell&rsquo;$ implies $\ell \leq \ell&rsquo;$.
+This idea can be expressed as a slightly-modified, derived form of the <strong>Embedding</strong> rule — called the <strong>Well-Definedness</strong> rule — as follows:</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi : \ell \quad (\ell \equiv 𝑚)}{\Gamma \vdash \phi : 𝑚}
+\cfrac{\Gamma \vdash \phi : \ell \quad (\ell \equiv \ell&rsquo;)}{\Gamma \vdash \phi : \ell&rsquo;}
 \end{gathered}
 $</p>
-<p>With this, the bracketing of taint-labels in the conclusion of the <strong>Disjunction Elimination</strong> rule, for example, is largely irrelevant, as the binary operation, $- \sqcup -$, is associative per our equational theory.</p>
+<p>With this, the bracketing of taint-labels in the conclusion of the <strong>Disjunction Elimination</strong> rule, for example, is largely irrelevant, as the binary operation, $- \sqcup -$, is associative and can be bracketed arbitrarily with no change in meaning.</p>
+<p>The Natural Deduction relation satisfies a number of basic correctness properties.
+First, only well-formed contexts and formulae are in-relation:</p>
+<p><strong>Lemma</strong>: if $\Gamma \vdash \phi : \ell$ then $\Gamma \text{ wf}$.</p>
+<p><strong>Lemma</strong>: if $\Gamma \vdash \phi : \ell$ then $\phi : Prop$.</p>
+<p>Moreover, if one can derive an equality between terms, via the Natural Deduction relation, then the equated terms have the same type (and that type is itself well-formed):</p>
+<p><strong>Lemma</strong>: if $\Gamma \vdash r = s : \ell$ then $r : \phi$ and $s : \phi$ for some $\phi : \star$.</p>
 <p>At this point, we can introduce a few more derived and admissible rules which are of general utility when constructing a proof.
-Note that neither of these rules will shock anybody with any familiarity with basic proof theory, albeit they now also need to be suitably &ldquo;enlightened&rdquo; to make them aware of the taint-labels.</p>
+Note that neither of these rules will shock anybody with any familiarity with basic proof theory, albeit they now also need to be suitably modified to make them aware of the taint-labels.</p>
 <p>First, the <strong>Weakening</strong> rule, which is proved by induction on the derivation of $\Gamma \vdash \phi : \ell$, allows us to add arbitrarily many further assumptions to the context that we are working in:</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi : \ell \quad (\Gamma \subseteq \Delta)}{\Delta \vdash \phi : \ell}
+\cfrac{\Gamma \vdash \phi : \ell \quad (\Gamma \subseteq \Gamma&rsquo; \quad \Gamma&rsquo; \text{ wf})}{\Gamma&rsquo; \vdash \phi : \ell}
 \end{gathered}
 $</p>
 <p>As a corollary of the <strong>Weakening</strong> rule, we can also introduce a form of <strong>Cut</strong> which allows us to introduce a useful lemma over the course of the proof:</p>
 <p>$
 \begin{gathered}
-\cfrac{\Gamma \vdash \phi : \ell \quad \Delta \cup \{ \phi \} \vdash \psi : 𝑚}{\Gamma \cup \Delta \vdash \psi : \ell \sqcup 𝑚}
+\cfrac{\Gamma \vdash \phi : \ell \quad \Gamma&rsquo; \cup \{ \phi \} \vdash \psi : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash \psi : \ell \sqcup \ell&rsquo;}
 \end{gathered}
 $</p>
-<p>In addition, we can start to explore other useful and interesting derived rules, such as the following:</p>
-<ul>
-<li>The <em>Conjunction Congruence</em> rule: if $\Gamma$ $\vdash$ $\phi$₁ = $\phi$₂ : $\ell$ and \Delta $\vdash$ $\psi$₁ = $\psi$₂ : 𝑚 then $\Gamma$ ∪ \Delta $\vdash$ $\phi$₁ $\wedge$ $\psi$₁ = $\phi$₂ $\wedge$ $\psi$₂ : $\ell$ ⊓ 𝑚.</li>
-<li>The <em>Function Extensionality</em> rule: if $\Gamma$ $\vdash$ f $x_{\tau}$ = g $x_{\tau}$ : $\ell$ then $\Gamma$ $\vdash$ f = g : $\ell$ whenever $x_{\tau}$ $\notin$ fv $\Gamma$.</li>
-<li>The <em>Classical Contradiction</em> rule: if $\Gamma$ ∪ {$\neg$$\phi$} $\vdash$ $$\bot$$ : $\ell$ then $\Gamma$ $\vdash$ $\phi$ : $\mathcal{C}$.</li>
-<li>The <em>Propositional Cases</em> rule: if $\Gamma$ ∪ {$\phi$} $\vdash$ $\psi$ : $\ell$ and $\Gamma$ ∪ {$\neg$$\phi$} $\vdash$ $\psi$ : 𝑚 then $\Gamma$ $\vdash$ $\psi$ : $\mathcal{C}$.</li>
-<li>The <em>Classical Implication Definition</em> axiom: $\Gamma$ $\vdash$ ($\phi$ $\longrightarrow$ $\psi$) = ($\neg$$\phi$ $\vee$ $\psi$) : $\mathcal{C}$.</li>
-</ul>
+<h3 id="some-more-derived-rules">Some more derived rules</h3>
+<p>Here, we start to explore other useful and interesting derived rules.
+We have various <strong>generalised congruence</strong> rules:</p>
+<p>$
+\begin{gathered}
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell \quad \Gamma&rsquo; \vdash \psi_1 = \psi_2 : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash (\phi_1 \wedge \psi_1) = (\phi_2 \wedge \psi_2) : \ell \sqcup \ell&rsquo;}
+\quad
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell \quad \Gamma&rsquo; \vdash \psi_1 = \psi_2 : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash (\phi_1 \vee \psi_1) = (\phi_2 \vee \psi_2) : \ell \sqcup \ell&rsquo;}
+\newline
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell \quad \Gamma&rsquo; \vdash \psi_1 = \psi_2 : \ell&rsquo;}{\Gamma \cup \Gamma&rsquo; \vdash (\phi_1 \longrightarrow \psi_1) = (\phi_2 \longrightarrow \psi_2) : \ell \sqcup \ell&rsquo;}
+\quad
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell}{\Gamma \vdash \neg\phi_1 = \neg\phi_2 : \ell}
+\newline
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell \quad (x_\tau \notin fv(\Gamma))}{\Gamma \vdash (\forall{x_\tau}.\phi_1) = (\forall{x_\tau}.\phi_2) : \ell}
+\quad
+\cfrac{\Gamma \vdash \phi_1 = \phi_2 : \ell \quad (x_\tau \notin fv(\Gamma))}{\Gamma \vdash (\exists{x_\tau}.\phi_1) = (\exists{x_\tau}.\phi_2) : \ell}
+\end{gathered}
+$</p>
+<p>An <strong>extensional equality</strong> rule for functions, capturing the fact that functions are equal when they behave the same on all possible inputs:</p>
+<p>$
+\begin{gathered}
+\cfrac{\Gamma \vdash f(x_{\tau}) = g(x_{\tau}) : \ell \quad (x_{\tau} \notin fv(\Gamma))}{\Gamma \vdash f = g : \ell}
+\end{gathered}
+$</p>
+<p>Moreover, we have various derived <strong>classical reasoning principles</strong>, including:</p>
+<p>$
+\begin{gathered}
+\cfrac{\Gamma \cup \{\neg\phi\} \vdash \bot : \ell}{\Gamma \vdash \phi : \mathcal{C}}
+\quad
+\cfrac{(\Gamma \text{ wf} \quad \phi : Prop \quad \psi : Prop)}{\Gamma \vdash ((\phi \rightarrow \psi) \rightarrow \phi) \rightarrow \phi : \mathcal{C}}
+\newline
+\cfrac{\Gamma \cup \{\phi\} \vdash \psi : \ell \quad \Gamma \cup \{\neg\phi\} \vdash \psi : \ell&rsquo;}{\Gamma \vdash \psi : \mathcal{C}}
+\quad
+\cfrac{(\Gamma \text{ wf} \quad \phi : Prop \quad \psi : Prop)}{\Gamma \vdash (\phi \longrightarrow \psi) = (\neg\phi \vee \psi) : \mathcal{C}}
+\newline
+\cfrac{(\Gamma \vdash \text{ wf} \quad \phi : Prop)}{\Gamma \vdash (\exists{x_\tau}.\phi) = (\neg\forall{x_\phi}.(\neg\phi)) : \mathcal{C}}
+\quad
+\cfrac{\Gamma \vdash \neg\neg\phi : \ell}{\Gamma \vdash \phi : \mathcal{C}}
+\end{gathered}
+$</p>
 <p>&hellip;and so on.</p>
 <h3 id="definitions-and-data">Definitions and data</h3>
 <p>We some definitional mechanisms to extend our global theory.
@@ -518,8 +610,8 @@ In addition, I&rsquo;m going to introduce new polymorphically-typed constants fo
 <li>The <em>Universal Complement</em> rule: $\Gamma$ $\vdash$ - Universal = ∅ : $\mathcal{I}$.</li>
 <li>The <em>Double Complement</em> rule: $\Gamma$ $\vdash$ &ndash;S = S : $\mathcal{C}$.</li>
 <li>The <em>Union-Intersection De Morgan</em> rule: $\Gamma$ $\vdash$ -(S ∪ T) = -S ∩ -T : $\mathcal{C}$.</li>
-<li>The <em>Set Equality Introduction</em> rule: if $\Gamma$ $\vdash$ $\phi$ $\subseteq$ T : $\ell$ and \Delta $\vdash$ T $\subseteq$ S : 𝑚 then $\Gamma$ ∪ \Delta $\vdash$ S = T : $\ell$ ⊓ 𝑚.</li>
-<li>The <em>Set Cases</em> rule: if $\Gamma$ ∪ {S = ∅} $\vdash$ $\phi$ : $\ell$ and $\Gamma$ ∪ {$\neg$(S = ∅)} $\vdash$ $\phi$ : 𝑚 then $\Gamma$ $\vdash$ $\phi$ : $\mathcal{C}$.</li>
+<li>The <em>Set Equality Introduction</em> rule: if $\Gamma$ $\vdash$ $\phi$ $\subseteq$ T : $\ell$ and \Delta $\vdash$ T $\subseteq$ S : $\ell&rsquo;$ then $\Gamma$ ∪ \Delta $\vdash$ S = T : $\ell$ ⊓ $\ell&rsquo;$.</li>
+<li>The <em>Set Cases</em> rule: if $\Gamma$ ∪ {S = ∅} $\vdash$ $\phi$ : $\ell$ and $\Gamma$ ∪ {$\neg$(S = ∅)} $\vdash$ $\phi$ : $\ell&rsquo;$ then $\Gamma$ $\vdash$ $\phi$ : $\mathcal{C}$.</li>
 </ul>
 <p>&hellip;and so on.</p>
 <h3 id="intermediate-logics">Intermediate logics</h3>
@@ -649,7 +741,7 @@ In addition, I&rsquo;ll add a further axiom to the logic:</p>
 		<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
 	</div>
 
-	<script src="https://dominicpm.github.io/js/main.min.c1aee25a817e9beb1f9c4afd9d62311227a7f5e46720e404dc1dda97281f47f2.js" integrity="sha256-wa7iWoF+m+sfnEr9nWIxEien9eRnIOQE3B3alygfR/I=" crossorigin="anonymous"></script>
+	<script src="https://dominicpm.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js" integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin="anonymous"></script>
 </footer>
     </body>
 </html>

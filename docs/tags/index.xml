@@ -7,7 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Sun, 12 Dec 2021 14:31:16 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 10:55:14 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>confidential-computing</title>
+      <link>https://dominicpm.github.io/tags/confidential-computing/</link>
+      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>icecap</title>
+      <link>https://dominicpm.github.io/tags/icecap/</link>
+      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/icecap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>veracruz</title>
+      <link>https://dominicpm.github.io/tags/veracruz/</link>
+      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory-models</title>
+      <link>https://dominicpm.github.io/tags/memory-models/</link>
+      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/memory-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://dominicpm.github.io/tags/security/</link>
+      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>verification</title>
+      <link>https://dominicpm.github.io/tags/verification/</link>
+      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/verification/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>site-administration</title>
       <link>https://dominicpm.github.io/tags/site-administration/</link>
@@ -18,56 +72,11 @@
     </item>
     
     <item>
-      <title>logic</title>
-      <link>https://dominicpm.github.io/tags/logic/</link>
-      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/logic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>verification</title>
-      <link>https://dominicpm.github.io/tags/verification/</link>
-      <pubDate>Sat, 27 Nov 2021 19:20:37 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/verification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>supervisionary</title>
       <link>https://dominicpm.github.io/tags/supervisionary/</link>
-      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
+      <pubDate>Fri, 26 Nov 2021 14:14:54 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/tags/supervisionary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>veracruz</title>
-      <link>https://dominicpm.github.io/tags/veracruz/</link>
-      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>wasm</title>
-      <link>https://dominicpm.github.io/tags/wasm/</link>
-      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/wasm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>confidential-computing</title>
-      <link>https://dominicpm.github.io/tags/confidential-computing/</link>
-      <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
       <description></description>
     </item>
     
@@ -95,15 +104,6 @@
       <pubDate>Wed, 15 Sep 2021 13:43:46 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/arm-cca/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>memory-models</title>
-      <link>https://dominicpm.github.io/tags/memory-models/</link>
-      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/memory-models/</guid>
       <description></description>
     </item>
     

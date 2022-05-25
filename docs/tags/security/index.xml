@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Dominic Mulligan</title>
+    <link>https://dominicpm.github.io/tags/security/</link>
+    <description>Recent content in security on Dominic Mulligan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <lastBuildDate>Wed, 25 May 2022 10:41:27 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted OSCAR 2022 workshop paper</title>
+      <link>https://dominicpm.github.io/posts/oscar-2022-paper/</link>
+      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/oscar-2022-paper/</guid>
+      <description>I&amp;rsquo;m delighted to announce that the abstract, &amp;ldquo;Scalable assurance via verifiable hardware-software contracts&amp;rdquo;, has been accepted for presentation at the Workshop on Open-source Computer Architecture Research (OSCAR 2022), co-located with ISCA. This was co-written with Yao Hsiao, Gustavo Petri, Nikos Nikoleris, and Caroline Trippel, with Yao presenting this work at the workshop.</description>
+    </item>
+    
+  </channel>
+</rss>

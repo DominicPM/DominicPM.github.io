@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Sat, 27 Nov 2021 19:10:28 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/supervisionary/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Supervisionary: the idea</title>
-      <link>https://dominicpm.github.io/posts/supervisionary-the-idea/</link>
-      <pubDate>Sat, 27 Nov 2021 19:10:28 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/posts/supervisionary-the-idea/</guid>
-      <description>Nick Spinale and I recently submitted a short talk abstract to the Principles of Secure Compilation (PriSC) workshop, co-located with POPL 2022. The abstract, which was thankfully accepted for presentation, describes some ideas that Nick and I have been discussing for a while. I&amp;rsquo;ll use this post to flesh the abstract out and explain the design of the prototype Supervisionary proof-checking system which Nick and I have been working on.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 26 Nov 2021 14:14:54 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/supervisionary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accepted PriSC 2022 workshop paper</title>
       <link>https://dominicpm.github.io/posts/prisc-2022-paper/</link>
