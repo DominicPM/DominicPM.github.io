@@ -10,9 +10,8 @@ Click [here](https://dblp2.uni-trier.de/pers/hd/m/Mulligan:Dominic_P=) for my DB
 
 - *A highly-available move operation for replicated trees.*
 Martin Kleppmann, Dominic P. Mulligan, Victor Gomes, and Alastair Beresford.
-**IEEE Transactions on Parallel and Distributed Systems**.
-In press, 2021.
-[PDF](./kleppmann-highly-available-2021pdf)
+**IEEE Transactions on Parallel and Distributed Systems**, volume 33, issue 7, pages 1711&ndash;1734, 2021.
+[PDF](./kleppmann-highly-available-2021.pdf)
 - *Permissive nominal terms and their unification: an infinite, coinfinite approach to nominal techniques.*
 Gilles Dowek, Murdoch J. Gabbay, and Dominic P. Mulligan.
 **Logic Journal of the Interest Group in Pure Logic**, volume 18, issue 6, pages 769&ndash;822, 2011.
@@ -24,6 +23,10 @@ Murdoch J. Gabbay and Dominic P. Mulligan.
 
 # Conferences and workshops
 
+- *Scalable assurance via verifiable hardware-software contracts.*
+Yao Hsiao, Dominic P. Mulligan, Nikos Nikoleris, Gustavo Petri, Caroline Trippel.
+**Accepted at the 1st Workshop on Open-source Computer Architecture Research (OSCAR)**, 2022.
+[PDF](./hsiao-scalable-2022.pdf)
 - *The Supervisionary proof-checking kernel: or, a work-in-progress towards proof-generating code.*
 Dominic P. Mulligan, Nick Spinale.
 **Accepted at the 6th Workshop on Principles of Secure Compilation (PriSC)**, 2022.
@@ -118,6 +121,10 @@ Roberto Amadio, Andrea Asperti, Nicolas Ayache, Brian Campbell, Dominic P. Mulli
 
 # Drafts, technical reports, and manuscripts
 
+- *Private delegated computations using strong isolation.*
+Mathias Brossard, Guilhem Bryant, Basma El Gaabouri, Xinxin Fan, Alexandre Ferreira, Edmund Grimley-Evans, Christopher Haster, Evan Johnson, Derek Miller, Fan Mo, Dominic P. Mulligan, Nick Spinale, Eric van Hensbergen, Hugo J. M. Vincent, Shale Xiong.
+Arm Research technical report, 2022.
+[PDF](./brossard-private-2022.pdf)
 - *Dijkstra’s algorithm without the distributivity axiom: a proof of correctness in Agda.*
 Leonhard D. Markert and Dominic P. Mulligan, 2016.
 [PDF](./markhert-dijkstra-2016.pdf)
