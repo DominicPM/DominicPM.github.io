@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Wed, 25 May 2022 10:55:14 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 15:55:09 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arm Trustworthy AI whitepaper</title>
+      <link>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</link>
+      <pubDate>Mon, 27 Jun 2022 15:55:09 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</guid>
+      <description>I am delighted to announce the recent publication of the Arm Trustworthy AI position paper, a documented which I contributed to. You can read the whitepaper here.</description>
+    </item>
+    
     <item>
       <title>New technical report on the Icecap and Veracruz projects</title>
       <link>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</link>
