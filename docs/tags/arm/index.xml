@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020–2021</copyright>
-    <lastBuildDate>Mon, 27 Jun 2022 15:55:09 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 14:14:30 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leaving Arm, and a new job at AWS</title>
+      <link>https://dominicpm.github.io/posts/leaving-arm/</link>
+      <pubDate>Fri, 01 Jul 2022 14:14:30 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/leaving-arm/</guid>
+      <description>I have now left Arm Research and will be taking up a position as a Principal Applied Scientist within the Automated Reasoning Group at AWS.</description>
+    </item>
+    
     <item>
       <title>Arm Trustworthy AI whitepaper</title>
       <link>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</link>

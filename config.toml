@@ -3,9 +3,12 @@ languageCode = "en-gb"
 title = "Dominic Mulligan"
 theme = "noteworthy"
 author = "Dominic Mulligan"
-copyright = "Dominic Mulligan, 2020–2021"
+copyright = "Dominic Mulligan, 2020&ndash;2022"
 enableRobotsTXT = true
 publishDir = "docs"
+
+[markup.goldmark.renderer]
+unsafe= true
 
 [menu]
   [[menu.main]]
