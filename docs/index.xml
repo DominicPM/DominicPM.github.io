@@ -6,7 +6,7 @@
     <description>Recent content on Dominic Mulligan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>Dominic Mulligan, 2020–2021</copyright>
+    <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
     <lastBuildDate>Fri, 01 Jul 2022 14:14:30 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leaving Arm, and a new job at AWS</title>
@@ -152,7 +152,7 @@ Journals A highly-available move operation for replicated trees. Martin Kleppman
       
       <guid>https://dominicpm.github.io/about/</guid>
       <description>In mid-July I will be joining the Automated Reasoning Group within Amazon Web Services (AWS) as a Principal Applied Scientist. Prior to moving to AWS I was:
-A Principal Research Engineer within the Systems Group at Arm Research, UK from 2017–2022. My research there focussed on privacy-preserving computation and correctness for low-level, security-critical software. A postdoctoral research scientist, from 2010–2017, first at the Dipartimento di Scienze dell&amp;rsquo;Informazione at the University of Bologna, and later at the Computer Laboratory at the University of Cambridge.</description>
+A Principal Research Engineer within the Systems Group at Arm Research, UK from 2017–2022. My research there focussed on privacy-preserving computation, as evidenced by the Confidential Computing Consortium-adopted Veracruz project, a project which I initiated and thereafter acted as technical lead on. Moreover, I also had a hand in developing software verification flows which provided strong evidence for the correctness for low-level, security-critical firmware, central to the Arm Confidential Computing Architecture (&amp;ldquo;Arm CCA&amp;rdquo;).</description>
     </item>
     
   </channel>
