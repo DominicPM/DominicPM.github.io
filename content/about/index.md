@@ -6,7 +6,7 @@ Prior to moving to AWS I was:
 - A Principal Research Engineer within the Systems Group at [Arm Research, UK](https://www.arm.com/resources/research) from 2017&ndash;2022.
 My research there focussed on privacy-preserving computation, as evidenced by the Confidential Computing Consortium-adopted [*Veracruz* project](https://github.com/veracruz-project/veracruz), a project which I initiated and thereafter acted as technical lead on.
 Moreover, I also had a hand in developing software verification flows which provided strong evidence for the correctness for low-level, security-critical firmware, central to the *Arm Confidential Computing Architecture* ("Arm CCA").
-This is a technology that will be deployed in a point-release for the Armv9-A architecture, and eventually be found in hundreds of millions of devices, worldwide.
+This is a Confidential Computing technology that will be deployed as a point-release for the Armv9-A architecture, and will eventually be found in hundreds of millions of devices worldwide.
 - A postdoctoral research scientist, from 2012&ndash;2017, at the [Computer Laboratory at the University of Cambridge](https://www.cl.cam.ac.uk).
 Here, I worked on [Prof. Peter Sewell's](https://www.cl.cam.ac.uk/~pes20/) [*Rigorous Engineering for Mainstream Systems* ("REMS") project](https://www.cl.cam.ac.uk/~pes20/rems/).
 I helped develop the Lem specification language, and developed a formal semantics of ELF static linking.
