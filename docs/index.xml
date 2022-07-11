@@ -151,8 +151,8 @@ Journals A highly-available move operation for replicated trees. Martin Kleppman
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/about/</guid>
-      <description>In mid-July I will be joining the Automated Reasoning Group within Amazon Web Services (AWS) as a Principal Applied Scientist. Prior to moving to AWS I was:
-A Principal Research Engineer within the Systems Group at Arm Research, UK from 2017–2022. My research there focussed on privacy-preserving computation, as evidenced by the Confidential Computing Consortium-adopted Veracruz project, a project which I initiated and thereafter acted as technical lead on. Moreover, I also had a hand in developing software verification flows which provided strong evidence for the correctness for low-level, security-critical firmware, central to the Arm Confidential Computing Architecture (&amp;ldquo;Arm CCA&amp;rdquo;).</description>
+      <description>I am a Principal Applied Scientist within the Automated Reasoning Group at Amazon Web Services, Cambridge, UK (AWS, henceforth). Prior to moving to AWS I was:
+A (Senior, then Staff, before finally being promoted to) Principal Research Engineer within the Systems Group at Arm Research, Cambridge, UK from 2017–2022. My research there focussed on privacy-preserving computation, as evidenced by the Confidential Computing Consortium-adopted Veracruz project, a project which I initiated and thereafter acted as technical lead on.</description>
     </item>
     
   </channel>
