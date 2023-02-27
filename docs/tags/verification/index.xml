@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Wed, 25 May 2022 10:41:27 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/verification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 17:20:15 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted OOPSLA/SPLASH 2023 paper</title>
+      <link>https://dominicpm.github.io/posts/oopsla-2023-paper/</link>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/oopsla-2023-paper/</guid>
+      <description>I am delighted to announce that the paper &amp;ldquo;A verification methodology for the Arm Confidential Computing Architecture&amp;rdquo; co-written with Anthony Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Nathan Chong, and Gustavo Petri has now been accepted for publication at OOPSLA/SPLASH 2023.</description>
+    </item>
+    
     <item>
       <title>Accepted OSCAR 2022 workshop paper</title>
       <link>https://dominicpm.github.io/posts/oscar-2022-paper/</link>

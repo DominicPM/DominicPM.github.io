@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dominicpm.github.io/tags/arm/</loc>
-    <lastmod>2022-07-01T14:14:30+01:00</lastmod>
+    <loc>https://dominicpm.github.io/posts/oopsla-2023-paper/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
   </url><url>
-    <loc>https://dominicpm.github.io/tags/aws/</loc>
-    <lastmod>2022-07-01T14:14:30+01:00</lastmod>
+    <loc>https://dominicpm.github.io/tags/arm/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/confidential-computing/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/posts/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/verification/</loc>
+    <lastmod>2023-02-27T17:20:15+00:00</lastmod>
+  </url><url>
+    <loc>https://dominicpm.github.io/tags/aws/</loc>
     <lastmod>2022-07-01T14:14:30+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/posts/leaving-arm/</loc>
     <lastmod>2022-07-01T14:14:30+01:00</lastmod>
   </url><url>
-    <loc>https://dominicpm.github.io/posts/</loc>
-    <lastmod>2022-07-01T14:14:30+01:00</lastmod>
-  </url><url>
-    <loc>https://dominicpm.github.io/tags/</loc>
-    <lastmod>2022-07-01T14:14:30+01:00</lastmod>
-  </url><url>
     <loc>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</loc>
-    <lastmod>2022-06-27T15:55:09+01:00</lastmod>
-  </url><url>
-    <loc>https://dominicpm.github.io/tags/confidential-computing/</loc>
     <lastmod>2022-06-27T15:55:09+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/tags/machine-learning/</loc>
@@ -45,9 +51,6 @@
     <lastmod>2022-05-25T10:41:27+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/tags/security/</loc>
-    <lastmod>2022-05-25T10:41:27+01:00</lastmod>
-  </url><url>
-    <loc>https://dominicpm.github.io/tags/verification/</loc>
     <lastmod>2022-05-25T10:41:27+01:00</lastmod>
   </url><url>
     <loc>https://dominicpm.github.io/posts/all-papers-moved/</loc>

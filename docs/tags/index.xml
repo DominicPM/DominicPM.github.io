@@ -7,13 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Fri, 01 Jul 2022 14:14:30 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 17:20:15 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>arm</title>
       <link>https://dominicpm.github.io/tags/arm/</link>
-      <pubDate>Fri, 01 Jul 2022 14:14:30 +0100</pubDate>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/tags/arm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>confidential-computing</title>
+      <link>https://dominicpm.github.io/tags/confidential-computing/</link>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>verification</title>
+      <link>https://dominicpm.github.io/tags/verification/</link>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/verification/</guid>
       <description></description>
     </item>
     
@@ -23,15 +41,6 @@
       <pubDate>Fri, 01 Jul 2022 14:14:30 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>confidential-computing</title>
-      <link>https://dominicpm.github.io/tags/confidential-computing/</link>
-      <pubDate>Mon, 27 Jun 2022 15:55:09 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
       <description></description>
     </item>
     
@@ -77,15 +86,6 @@
       <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>verification</title>
-      <link>https://dominicpm.github.io/tags/verification/</link>
-      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/verification/</guid>
       <description></description>
     </item>
     
