@@ -23,6 +23,10 @@ Murdoch J. Gabbay and Dominic P. Mulligan.
 
 # Conferences and workshops
 
+- *A verification methodology for Arm Confidential Computing Architecture, from a secure specification to safe implementations*.
+Anthony C. J. Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Dominic P. Mulligan, Gustavo Petri, and Nathan Chong.
+**Accepted at OOPSLA/SPLASH**, 2023.
+[PDF](./fox-verification-2023.pdf)
 - *Scalable assurance via verifiable hardware-software contracts.*
 Yao Hsiao, Dominic P. Mulligan, Nikos Nikoleris, Gustavo Petri, Caroline Trippel.
 **Accepted at the 1st Workshop on Open-source Computer Architecture Research (OSCAR)**, 2022.
