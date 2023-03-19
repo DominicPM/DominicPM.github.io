@@ -7,3 +7,4 @@ tags: ["confidential-computing", "arm", "verification"]
 
 I am delighted to announce that the paper "A verification methodology for the Arm Confidential Computing Architecture" co-written with Anthony Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Nathan Chong, and Gustavo Petri has now been accepted for publication at OOPSLA/SPLASH 2023.
 
+The PDF of the final version of the paper is [here](./../../publications/fox-verification-2023.pdf).
