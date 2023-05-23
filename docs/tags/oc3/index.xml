@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="https://dominicpm.github.io/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>oc3 on Dominic Mulligan</title>
@@ -7,15 +8,317 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 13:59:39 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/oc3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 13:59:39 +0000</lastBuildDate>
+    <atom:link href="https://dominicpm.github.io/tags/oc3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted IEEE TETCSI special issue paper</title>
+      <link>https://dominicpm.github.io/posts/tetcsi-2023-paper/</link>
+      <pubDate>Tue, 23 May 2023 20:03:23 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/tetcsi-2023-paper/</guid>
+      <description>&lt;p&gt;I am delighted to announce that the paper &lt;em&gt;Private delegated computations using strong isolation&lt;/em&gt; has been accepted into a special issue on advances in emerging privacy-preserving computation at IEEE Transactions on Emerging Topics in Computer Science (TETCSI).
+The paper was coauthored with Mathias Brossard, Guilhem Bryant, Basma El Gaabouri, Xinxin Fan, Alexandre Ferreira, Edmund Grimley-Evans, Christopher Haster, Evan Johnson, Derek Miller, Fan Mo, Nick Spinale, Eric van Hensbergen, Hugo J. M. Vincent, and Shale Xiong.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Accepted TYPES 2022 post-proceedings paper</title>
+      <link>https://dominicpm.github.io/posts/types-2022-paper/</link>
+      <pubDate>Tue, 23 May 2023 19:49:29 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/types-2022-paper/</guid>
+      <description>&lt;p&gt;I am delighted to announce that the paper &lt;em&gt;All watched over by machines of loving grace&lt;/em&gt;, describing the &lt;a href=&#34;https://github.com/DominicPM/supervisionary&#34;&gt;Supervisionary&lt;/a&gt; proof-checking system for HOL, has been accepted in the post-proceedings of TYPES 2022.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Accepted OOPSLA/SPLASH 2023 paper</title>
+      <link>https://dominicpm.github.io/posts/oopsla-2023-paper/</link>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      <guid>https://dominicpm.github.io/posts/oopsla-2023-paper/</guid>
+      <description>&lt;p&gt;I am delighted to announce that the paper &amp;ldquo;A verification methodology for the Arm Confidential Computing Architecture&amp;rdquo; co-written with Anthony Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Nathan Chong, and Gustavo Petri has now been accepted for publication at OOPSLA/SPLASH 2023.&lt;/p&gt;
+&lt;p&gt;The PDF of the final version of the paper is &lt;a href=&#34;./../../publications/fox-verification-2023.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Leaving Arm, and a new job at AWS</title>
+      <link>https://dominicpm.github.io/posts/leaving-arm/</link>
+      <pubDate>Fri, 01 Jul 2022 14:14:30 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/leaving-arm/</guid>
+      <description>&lt;p&gt;I have now left Arm Research and will be taking up a position as a Principal Applied Scientist within the Automated Reasoning Group at AWS.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Arm Trustworthy AI whitepaper</title>
+      <link>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</link>
+      <pubDate>Mon, 27 Jun 2022 15:55:09 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/arm-trustworthy-ai-whitepaper/</guid>
+      <description>&lt;p&gt;I am delighted to announce the recent publication of the Arm Trustworthy AI position paper, a documented which I contributed to.
+You can read the whitepaper &lt;a href=&#34;https://interactive.arm.com/story/building-trustworthy-ai/page/1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>New technical report on the Icecap and Veracruz projects</title>
+      <link>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</link>
+      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</guid>
+      <description>&lt;p&gt;I am delighted to announce the recent release of an Arm Research technical report on the IceCap and Veracruz confidential-computing projects.
+The report, &amp;ldquo;Private delegated computations using strong isolation&amp;rdquo;, is co-authored by Mathias Brossard, Guilhem Bryant, Basma El Gaabouri, Xinxin Fan, Alexandre Ferreira, Edmund Grimley-Evans, Christopher Haster, Evan Johnson, Derek Miller, Fan Mo, Nick Spinale, Eric van Hensbergen, Hugo J. M. Vincent, Shale Xiong, and me.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Accepted OSCAR 2022 workshop paper</title>
+      <link>https://dominicpm.github.io/posts/oscar-2022-paper/</link>
+      <pubDate>Wed, 25 May 2022 10:41:27 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/oscar-2022-paper/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m delighted to announce that the abstract, &amp;ldquo;Scalable assurance via verifiable hardware-software contracts&amp;rdquo;, has been accepted for presentation at the Workshop on Open-source Computer Architecture Research (OSCAR 2022), co-located with ISCA.
+This was co-written with Yao Hsiao, Gustavo Petri, Nikos Nikoleris, and Caroline Trippel, with Yao presenting this work at the workshop.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>All papers moved from previous homepage</title>
+      <link>https://dominicpm.github.io/posts/all-papers-moved/</link>
+      <pubDate>Sun, 12 Dec 2021 14:31:16 +0000</pubDate>
+      <guid>https://dominicpm.github.io/posts/all-papers-moved/</guid>
+      <description>&lt;p&gt;I am pleased to announce that electronic copies of all of my papers have now been moved over from my old website and can be found under &amp;ldquo;Publications&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Accepted PriSC 2022 workshop paper</title>
+      <link>https://dominicpm.github.io/posts/prisc-2022-paper/</link>
+      <pubDate>Fri, 26 Nov 2021 14:14:54 +0000</pubDate>
+      <guid>https://dominicpm.github.io/posts/prisc-2022-paper/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m delighted to announce that &amp;ldquo;The Supervisionary proof-checking kernel, or: a work-in-progress towards proof-generating code&amp;rdquo;, which I co-authored with Nick Spinale, has been accepted for presentation at the workshop on Principles of Secure Compilation (PriSC 2022), co-located with POPL.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>OC3 programme committee invite</title>
       <link>https://dominicpm.github.io/posts/oc3-programme-committee/</link>
       <pubDate>Fri, 26 Nov 2021 13:59:39 +0000</pubDate>
-      
       <guid>https://dominicpm.github.io/posts/oc3-programme-committee/</guid>
-      <description>I am honoured to have been invited to serve on the Open Confidential Computing Conference (OC3 2021) programme committee. Please, consider submitting a talk proposal! Derek Miller, from the Veracruz project, presented a talk at last year&amp;rsquo;s OC3 event which had a great mix of interesting talks and was very well attended.</description>
+      <description>&lt;p&gt;I am honoured to have been invited to serve on the &lt;a href=&#34;https://www.papercall.io/oc3-2022&#34;&gt;Open Confidential Computing Conference (OC3 2021)&lt;/a&gt; programme committee.
+Please, consider submitting a talk proposal!
+Derek Miller, from the Veracruz project, presented a talk at &lt;a href=&#34;https://www.youtube.com/playlist?list=PLEhAl3D5WVvSKTp9jD6lV67zuFR8lUZVa&#34;&gt;last year&amp;rsquo;s OC3 event&lt;/a&gt; which had a great mix of interesting talks and was very well attended.&lt;/p&gt;
+</description>
     </item>
-    
+    <item>
+      <title>Accepted paper at IEEE Transactions on Parallel and Distributed Systems</title>
+      <link>https://dominicpm.github.io/posts/ieee-tpds-2021-paper/</link>
+      <pubDate>Mon, 04 Oct 2021 09:40:45 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/ieee-tpds-2021-paper/</guid>
+      <description>&lt;p&gt;I am please to announce that the paper &amp;ldquo;A highly-available move operation for replicated trees&amp;rdquo; has now been accepted for publication at IEEE Transactions on Parallel and Distributed Systems (TPDS).
+This is joint work with Martin Kleppmann, Victor Gomes, and Alastair Beresford.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Invited talk at FICS, the University of Florida</title>
+      <link>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</link>
+      <pubDate>Wed, 15 Sep 2021 13:43:46 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/florida-fics2021-invited-talk/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;d like to thank &lt;a href=&#34;https://cise.ufl.edu/~butler&#34;&gt;Prof. Kevin Butler&lt;/a&gt; for inviting me to give a keynote talk at the Technical Demo Conference within the &lt;a href=&#34;https://fics.institute.ufl.edu&#34;&gt;Florida Institute for Cybersecurity Research (FICS)&lt;/a&gt; at the University of Florida.
+My slides for the talk—Confidential Computing: Brave New World— are available &lt;a href=&#34;../../talks/confidential-computing-brave-new-world-september-2021.pptx&#34;&gt;here&lt;/a&gt; in Microsoft PowerPoint format.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Accepted paper at IEEE/ACM MICRO 2021</title>
+      <link>https://dominicpm.github.io/posts/micro-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:35:38 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/micro-2021-paper/</guid>
+      <description>&lt;p&gt;I am pleased to announce that the paper &amp;ldquo;Synthesizing formal models of hardware from RTL for efficient verification of memory model implementations&amp;rdquo; has been accepted for publication at the IEEE/ACM International Symposium on Microarchitecture (MICRO) 2021.
+This is a paper co-written with Yao Hsiao (Stanford), Gustavo Petri (Arm Research), Nikos Nikoleris (Arm Research), and Caroline Trippel (Stanford).&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Invited paper at IEEE SEED 2021</title>
+      <link>https://dominicpm.github.io/posts/seeds-2021-paper/</link>
+      <pubDate>Tue, 07 Sep 2021 16:23:22 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/seeds-2021-paper/</guid>
+      <description>&lt;p&gt;I am happy to announce a new paper&amp;mdash;an invited contribution from industry&amp;mdash;accepted at the IEEE International Symposium on Secure and Private Execution Environment Design (SEED 2021): &amp;ldquo;Seeds of SEED: Confidential Computing&amp;mdash;a brave new world&amp;rdquo;.
+This was written with some of my colleagues at Arm: Gustavo Petri, Nick Spinale, Gareth Stockwell, and Hugo Vincent.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Privacy-preserving collaborative compute with Veracruz</title>
+      <link>https://dominicpm.github.io/posts/veracruz/</link>
+      <pubDate>Tue, 27 Apr 2021 23:11:54 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/veracruz/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/veracruz-project/veracruz&#34;&gt;Veracruz&lt;/a&gt; is a project that I&amp;rsquo;ve been working on for a while internally within Arm Research.
+Recently, Veracruz was released as an open-source project on Github, with all development and design discussions moving into the open.
+This was a precursor to the project being adopted by the Linux Foundation&amp;rsquo;s &lt;a href=&#34;http://confidentialcomputing.io&#34;&gt;Confidential Computing Consortium (CCC)&lt;/a&gt;, which I&amp;rsquo;m pleased to say finally happened a few weeks ago, at the beginning of April.&lt;/p&gt;
+&lt;p&gt;In this post, I&amp;rsquo;ll explain a little bit more about the project and what its motivation.&lt;/p&gt;
+&lt;h2 id=&#34;protecting-data&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#protecting-data&#34;&gt;Protecting data&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Data exists in one of three modes: &lt;em&gt;at rest&lt;/em&gt;, &lt;em&gt;in transit&lt;/em&gt;, and &lt;em&gt;in use&lt;/em&gt;.
+Generally speaking, we know how to protect data when it is at rest, using full-disk encryption technology built around standard block ciphers like the Advanced Encryption Standard (AES).
+Moreover, we understand how to protect data when in transit, that is when it is being sent from computer to computer, using standard transport layer security protocols like TLS.&lt;/p&gt;
+&lt;p&gt;Where things get interesting is when trying to protect data when in use, that is, when it is being actively computed on.
+Cryptographers have made some great strides over the last 15 years in defining new encryption schemes that protect data when in use.
+These include so-called &lt;em&gt;fully-homomorphic encryption schemes&lt;/em&gt;, the first of which was discovered by Craig Gentry, which allow us to compute a function directly on ciphertext without first requiring decryption.
+Moreover, in collaborative settings, cryptographers have defined a number of protocols for &lt;em&gt;secure multi-party computations&lt;/em&gt;, wherein a group of mutually-distrusting principals wish to compute a function over their combined private inputs without revealing their inputs to any other principal.
+Using these tools, we are able to compute functions on data without requiring that the data be decrypted (in the case of homomorphic encryption) or without necessarily sharing raw data (in the case of secure multi-party compuations).&lt;/p&gt;
+&lt;p&gt;All is well.
+Data leaks are a thing of the past.&lt;/p&gt;
+&lt;p&gt;Or maybe not.&lt;/p&gt;
+&lt;p&gt;These &lt;em&gt;Advanced Cryptography&lt;/em&gt; tools tend to have a common set of frailties that make them hard to deploy in real world settings.
+Perhaps — most infamously — they are &lt;em&gt;slow&lt;/em&gt;: computing directly on ciphertexts with homomorphic encryption schemes incurs significant performance penalties when compared to native execution speeds.
+More than that, they also tend to be quite hard to deploy in practice, tend to be brittle in the face of shifting business requirements, and perhaps most importantly of all are almost impossible for non-cryptographers to actually understand or implement securely.
+This latter point is probably more important than it first appears, as — by and large — there are relatively few production grade implementations of these cryptographic tools; even if you were lucky enough to find an algorithm that perfectly matches your business requirements, chances are it would be up to you to implement it from scratch using research papers as a guide.&lt;/p&gt;
+&lt;p&gt;At this point, I should not that cryptographers have made really quite impressive strides in boosting the performance of many of the cryptographic techniques mentioned above.
+The performance penalty associated with homomorphic encryption has decreased by many orders of magnitude over the last decade, for example, to the point that it is now feasible to use it to protect small problems of interest.
+But, there&amp;rsquo;s still a way to go.
+Is there an interim solution that we can use to protect data when in use?&lt;/p&gt;
+&lt;h2 id=&#34;hardware-support-for-confidential-computing&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#hardware-support-for-confidential-computing&#34;&gt;Hardware support for Confidential Computing&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;A recent trend in the hardware industry is the addition of explicit support for &lt;em&gt;Confidential Computing&lt;/em&gt;.
+This support comes in the form of a protected execution environment — variously called a &lt;em&gt;Secure Enclave&lt;/em&gt;, a &lt;em&gt;Realm&lt;/em&gt;, a &lt;em&gt;Trusted Application&lt;/em&gt;, a &lt;em&gt;Protected Virtual Machine&lt;/em&gt;, or similar — that provides strong protections to code and data hosted within.
+Concrete examples of this trend include Intel&amp;rsquo;s Software Guard Extensions (SGX), AMD&amp;rsquo;s Secure Encrypted Virtualization (SEV), and the recently announced Arm Confidential Compute Architecture (CCA).&lt;/p&gt;
+&lt;p&gt;(Given the large number of names associated with these technolgies — and the fact that some names are now strongly associated with a particular technology — I will use &lt;em&gt;strong isolation technology&lt;/em&gt; to refer to a generic enclave-like technology, and use &lt;em&gt;isolate&lt;/em&gt; to refer to a generic protected execution environment, henceforth.)&lt;/p&gt;
+&lt;p&gt;Up close, each strong isolation technology adds its own specific twist on the theme.
+Howver, from a distance, it&amp;rsquo;s still possible to speak in gross generalities about each of them and the features that they tend to provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Confidentiality and integrity guarantees&lt;/em&gt;: code and data hosted within an isolate are provided strong guarantees against monitoring or interference by an external adversary.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Protection in the face of a strong attacker&lt;/em&gt;: system software, such as the operating system and hypervisor, are explicitly outside of the trusted computing base.
+In short, an isolate is — as the name suggestes — completely isolated from the operating system and any other software running on the host machine, including other isolates.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Associated remote attestation mechanisms&lt;/em&gt;: remote attestation is a cryptographic technique which allows a skeptic to challenge the authenticity of an isolate and the integrity of any software loaded within it.
+Using remote attestation, we can check, and receive with a high level of assurance, that software claiming to be running inside an isolate on a remote machine is actually running inside an isolate (and not emulated), and was configured and loaded with the software that we expect.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Putting the three properties above together, we can use strong isolation technologies to create a safe, neutral ground within which a collaborative execution can take place.
+Any such execution is protected by the isolate&amp;rsquo;s confidentiality and integrity guarantees, even against an adversary that is able to subvert the exceptional powers of the host operating system.
+Moreover, using remote attestation, we are able to check that the isolate that we are interacting with, and which is claiming to protect our computations, is indeed authentic and was also loaded with the software that we expect.&lt;/p&gt;
+&lt;p&gt;Essentially, strong isolation technologies provide what&amp;rsquo;s needed to protect data when in use, without necessarily having to use advanced cryptographic techniques.
+Note that using hardware, instead of cryprographic, to protect data in use is not entirely without its downsides: we&amp;rsquo;ll necessarily have to trust the correctness and security of more than we would with a cryptographic solution.
+I&amp;rsquo;ll come back to this point, later.&lt;/p&gt;
+&lt;h2 id=&#34;veracruz&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#veracruz&#34;&gt;Veracruz&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Veracruz&lt;/em&gt; is a framework — a collection of protocols, tools, and a trusted runtime — for defining and deploying privacy-preserving collaborative computations.
+In the most general case, a computation defined with Veracruz consists of &lt;em&gt;N&lt;/em&gt; distinct &lt;em&gt;data providers&lt;/em&gt;, each of which has an associated data set that they wish to contribute as an input to the computation.
+Working with the data providers is a distinguished &lt;em&gt;program provider&lt;/em&gt; who is charged with providing the computation that will transform the data provider&amp;rsquo;s inputs into an output.
+Together, the data and program providers will outsource their computation to another party, which we call the &lt;em&gt;host&lt;/em&gt;, and who will contribute the computational power to affect the collaborative computation.&lt;/p&gt;
+&lt;p&gt;Together, the data providers, program provider, and host are all &lt;em&gt;mutually distrusting&lt;/em&gt;.
+Each data provider does not wish to reveal their data sets to each other, nor to anybody else for that matter, and the program provider does not necessarily wish to reveal their program binary, neither, as it may constitute sensitive IP.
+Moreover, the host is explicitly untrusted by both program and data providers, and generally also wants to place strict limits on the capabilities of the program over the course of its execution lest a malicious program provider attempt to run malware on the host&amp;rsquo;s machine.&lt;/p&gt;
+&lt;p&gt;Concretely, Veracruz provides a &lt;em&gt;trusted runtime&lt;/em&gt;, the source of which is &lt;a href=&#34;https://github.com/veracruz-project/veracruz&#34;&gt;open&lt;/a&gt; and auditable by anybody who cares to look, which will execute inside of an isolate spawned on the host&amp;rsquo;s machine.
+The trusted runtime, as the name suggests, must be explicitly trusted by everybody involved in the computation, hence the open-source nature of the runtime&amp;rsquo;s codebase is not merely a development decision on our part, but a vital part of the Veracruz trust story.
+In particular, everybody needs to ensure that the trusted runtime has not been &amp;ldquo;backdoored&amp;rdquo; or tampered with by any malefactor before engaging further in the computation.&lt;/p&gt;
+&lt;p&gt;Each Veracruz computation is parameterized by a &lt;em&gt;global policy&lt;/em&gt;.
+The policy is a configuration file that specifies various bits of important information about the computation itself, namely &lt;em&gt;who&lt;/em&gt; is involved (where principals are identified by cryptographic certificates) and &lt;em&gt;what&lt;/em&gt; they will be doing as part of the computation.
+Specifically, each principal in the computation is assigned a set of &lt;em&gt;roles&lt;/em&gt; by the global policy, detailing whether they are to provide data, provide the program, or receive a result from the computation.
+Note that one principal may actually take on many roles.
+For example, depending on the particular computation, a data provider may also be tasked with providing the program, and may also be able to receive the result of the computation.
+As a result of this, everybody must also have audited the policy, and understand its consequences, before enrolling any further in the computation.&lt;/p&gt;
+&lt;p&gt;Together, the policy and the program provider&amp;rsquo;s program define the &amp;ldquo;shape&amp;rdquo; and &amp;ldquo;means&amp;rdquo; of the collaborative computation.
+Varying either one changes the nature of the computation.
+Note that steps taken to agree on the text of policy are out-of-scope for Veracruz, we simply assume that there is some prior &amp;ldquo;out of band&amp;rdquo; communication that allows all participants to agree on one prior to the computation taking place.&lt;/p&gt;
+&lt;p&gt;Assuming that the policy is acceptable to all involved, the first step in computing a result with Veracruz is for the program provider to challenge the authenticity of the isolate spawned by the host, and check that the content of that isolate is indeed the runtime that the program provider audited, and a malicious host had not &amp;ldquo;backdoored&amp;rdquo; it after audit.
+To do this, the program provider uses a &lt;em&gt;remote attestation&lt;/em&gt; procedure to obtain an &lt;em&gt;attestation token&lt;/em&gt; that contains a &lt;em&gt;measurement&lt;/em&gt; — or cryptographic hash — of the software loaded into the isolate.
+This attestation token can be passed to an external attestation service, such as the Intel Attestation Service (IAS) associated with Intel SGX, which will either authenticate the token as originating from a legitimate isolate, or reject it.
+Moreover, assuming that we can produce &lt;em&gt;reproducible builds&lt;/em&gt; of the trusted runtime, the measurement contained within the attestation token can be compared against an independent measurement of the runtime that the program provider is themselves able to independently produce.
+Once authenticated, providing the program provider trusts the attestation service, the token serves as strong evidence that the host has indeed started a legitimate isolate (of a particular kind) and that the isolate contains a legitimate Veracruz trusted runtime.&lt;/p&gt;
+&lt;p&gt;Once this dance is completed, the program provider provisions their program directly into the trusted runtime loaded within the isolate.
+To do this, they establish a TLS connection that terminates &lt;em&gt;inside&lt;/em&gt; the isolate.
+As a result, from the perspective of the untrusted host, the traffic between the program provider and the trusted runtime is completely opaque.&lt;/p&gt;
+&lt;p&gt;Once this step is completed, each of the data providers follows the same dance that the program provider performed, first challenging the authenticity of the isolate using remote attestation, and then comparing the measurement of the trusted runtime against a precomputed hash, if desired.
+Once convinced, each of the data providers then provisions their respective secrets directly into the trusted runtime, again using a TLS link which obscures the secret from the untrusted host.
+However, data providers may engage in an additional step before provisioning their secrets, namely they may request from the runtime the hash of the binary that the program provider provisioned into the runtime previously.
+In cases where the program provider chooses to intentionally declassify their program, revealing it to the other participants before the computation begins (we&amp;rsquo;ll discuss some cases where this makes sense, below), this allows the data providers to ensure that the program provider provisioned the program that they promised they would.
+Note that, along these lines, both data providers and program provider can also request details of the global policy being enforced by the trusted runtime, again to make sure that the policy they agreed to is in fact the one that is being enforced.&lt;/p&gt;
+&lt;p&gt;By now, both the program and all of the input data sets are now provisioned inside of the trusted runtime.
+Note that one interesting aspect of Veracruz is that we support a range of different isolation mechanisms.
+At the time of writing, the trusted runtime could be loaded into an Arm TrustZone trusted application, an Intel SGX Secure Enclave, an AWS Nitro Enclave, or make use of software isolation mechanisms afforded by the high-assurance seL4 hypervisor.
+As a result of this, we need some way of abstracting over the particular instruction set in use by the isolate spawned by the host.
+For this reason, in Veracruz, the program provider&amp;rsquo;s program is supplied as a WebAssembly binary, which serves as an architecture-independent executable format.
+Moreover, by using WebAssembly, we can control the capabilities of the program provider&amp;rsquo;s program, providing it with only the capabilities needed to express a range of computations of interest.
+To a first approximation, you can assume that the program is only capable of expressing a &lt;em&gt;pure&lt;/em&gt; function of the inputs from the various data providers, modulo the ability to generate some random data.
+Specifically, the program is prevented from opening any file, or otherwise producing any observable side-effect, on the host&amp;rsquo;s machine.
+This both protects the host, and also provides a defence against an untrusted host and program provider from colluding to steal secret inputs.&lt;/p&gt;
+&lt;p&gt;Once all secrets are provisioned into the isolate, the computation can go ahead and compute a value as output (or diverge).
+After this is done, the principals able to receive the result, per the global policy, by establishing a TLS link that again terminates inside the isolate.
+Again, this ensures that the untrusted host is unable to view or manipulate the result of the computation as it is transferred out of the isolate to each of the result receivers.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#use-cases&#34;&gt;Use-cases&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The description of Veracruz in the last section is fairly abstract, but can be better understood by explaining how some concrete problems can be solved using the framework.&lt;/p&gt;
+&lt;h3 id=&#34;privacy-preserving-machine-learning&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#privacy-preserving-machine-learning&#34;&gt;Privacy-preserving machine learning&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Alice and Bob are two rival online retailers who each have a private dataset capturing click-through data for customers on their respective webstores.
+The two wish to produce a machine learning recommendation engine to show relevant products to their customers and drive new sales.
+However, both realize that the size of their respective datasets makes it unlikely that they can produce decent recommendations, but by combining the two, they can produce a much better recommendation engine than either could separately.
+However, given that Alice and Bob are both rivals, neither wishes to reveal their private datasets to the other.
+To produce this machine learning model over the two datasets, Alice and Bob will use Veracruz.&lt;/p&gt;
+&lt;p&gt;First, the two must agree on a global policy.
+To do this, arbitrarily one of them will be tasked with producing (or supplying) the program which wil implement the machine learning algorithm of interest, assuming that the inputs are packed into some mutually-agreeable data format, and so on.
+Let&amp;rsquo;s assume Alice is tasked with the producing of this program.
+Moreover, both will be listed as providing data inputs, and also received the output from the computation, by the policy.
+After this, Alice goes ahead and implements the machine learning model, and then declassifies the program by sharing it with Bob, so he can audit it and check that it is indeed what was agreed.&lt;/p&gt;
+&lt;p&gt;Once Bob is happy with the program that Alice has produced, Alice can go ahead and provision the program into the Veracruz trusted runtime, hosted within some isolate spawned on a mutually-agreeable host&amp;rsquo;s machine, after following the remote attestation song-and-dance detailed above.
+Once done, both Alice and Bob then also provision their private datasets — the inputs to the computation — again after performing this same remote attestation procedure.
+Importantly, at this stage, Bob should also check that Alice had indeed provisioned the correct machine learning algorithm that he had previously audited (and if not, bail out of the computation).&lt;/p&gt;
+&lt;p&gt;At this point, everything is in place to go ahead and apply the machine learning algorithm to the inputs.
+As both Alice and Bob are specified as being able to receive the result by the global policy, once the computation completes they can both connect to the isolate using a TLS link to retrieve it.
+Note that neither Alice nor Bob ever see the secret input of other, nor does the host of the computation, as all secrets are only ever in one place inside the isolate which is assumed to have strong confidentiality guarantees that protect code and data hosted within.&lt;/p&gt;
+&lt;h3 id=&#34;other-potential-use-cases&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#other-potential-use-cases&#34;&gt;Other potential use-cases&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;It turns out, with a little thought, that a lot of collaborative computations fall into the general pattern of &lt;em&gt;N&lt;/em&gt; data providers trying to collaborate with a program provider to achieve some desired effect.
+For example, with a little thought, it&amp;rsquo;s possible to apply Veracruz to problems like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Private set-intersection, or private set intersection-sum problems,&lt;/li&gt;
+&lt;li&gt;Privacy-preserving genomics,&lt;/li&gt;
+&lt;li&gt;Privacy-preserving social graph analytics,&lt;/li&gt;
+&lt;li&gt;Protecting commercially-sensitive algorithms and other IP,&lt;/li&gt;
+&lt;li&gt;Secret auctions, polls, surveys, and similar,&lt;/li&gt;
+&lt;li&gt;Securely offloading computations from computationally-weak devices,&lt;/li&gt;
+&lt;li&gt;Oblivious routing in maps,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;hellip;and many more.&lt;/p&gt;
+&lt;h2 id=&#34;comparison-with-cryptographic-techniques&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#comparison-with-cryptographic-techniques&#34;&gt;Comparison with cryptographic techniques&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;So, how does Veracruz compare to pure cryptography?&lt;/p&gt;
+&lt;p&gt;One disadvantage of Veracruz is the size of the trusted computing base when compared with pure cryptography.
+Namely, the trusted Veracruz runtime (including the WebAssembly execution engine) must be trusted, as must the remote attestation protocol and external attestation service.
+Moreover, with Veracruz, we provide no explicit protection against side-channel attacks at present.
+There are several opportunities for a malicious participant (especially the program provider) to insert side-channels into the program, for example, in order to surreptitiously exfiltrate secrets from the isolate.
+If participants are concerned about the risk of side-channels, then they must insist on the program provider declassifying their program as a precondition of taking part.&lt;/p&gt;
+&lt;p&gt;On the other hand, Veracruz is flexible in a way that cryptography typically is not.
+Focussing on one of the suggested use-cases above, we could use Veracruz to obliviously compute directions from point-to-point in a map, working directly with OpenStreetMap data, for example, inside the isolate, making use of existing libraries for graph shortest path algorithms to complete the task.
+What&amp;rsquo;s more, Veracruz computations can be written in a range of high-level programming languages, owing to our use of WebAssembly, making use of standard programming tools and idioms.
+This is in contrast to cryptographic approaches, which either must be compiled to some special-purpose representation (e.g. arithmetic circuits) which make computations hard to develop and debug.
+Finally, computations can be freely composed in Veracruz just by combining programs and subprocedures.
+In contrast, safely composing protocols for secure multi-party computations is a challenge in itself.&lt;/p&gt;
+&lt;h2 id=&#34;reading-more&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://dominicpm.github.io/posts/veracruz/#reading-more&#34;&gt;Reading more&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;To find out more:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For more introductory material on Veracruz you can see my recent talk in the Hardware-aided Trusted Execution Environment DevRoom at FOSDEM 2021.
+A recording is available &lt;a href=&#34;https://video.fosdem.org/2021/D.hardware.trusted/tee_veracruz.mp4&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For more in-depth material about how Veracruz handles remote attestation you can see Derek Miller&amp;rsquo;s recent talk at Linux Conf Australasia 2021 and the Open Confidential Computing Conference (OC3) 2021.
+Recordings are available &lt;a href=&#34;https://www.youtube.com/watch?v=CoI4NLmQTqE&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=6njKU9v1kEg&amp;amp;list=PLEhAl3D5WVvSKTp9jD6lV67zuFR8lUZVa&amp;amp;index=12&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;An upcoming (at the time of writing) Confidential Compute Consortium (CCC) webinar from members of the Veracruz team (including me).
+Click &lt;a href=&#34;https://confidentialcomputing.io/webinar-veracruz/&#34;&gt;here&lt;/a&gt; for details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, check out the &lt;a href=&#34;https://veracruz-project.github.io&#34;&gt;Veracruz homepage&lt;/a&gt;, which posts ongoing developments in the project, and the &lt;a href=&#34;https://github.com/veracruz-project/veracruz&#34;&gt;main Github repository&lt;/a&gt; for the project.
+We are always looking for collaborators to work with us, and the Github issue tracker for the project contains many ideas for new contributors, including many that are suitable for newcomers to the project.
+Details of public weekly technical discussions, and our Slack channel hosted by the Confidential Compute Consortium, are available in the README in the repository.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Publications list</title>
+      <link>https://dominicpm.github.io/posts/publications-list/</link>
+      <pubDate>Wed, 05 Aug 2020 16:21:05 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/publications-list/</guid>
+      <description>&lt;p&gt;I have now moved my bibliography over from my old website.
+The list can be found &lt;a href=&#34;https://dominicpm.github.io/publications/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>New Homepage</title>
+      <link>https://dominicpm.github.io/posts/new-homepage/</link>
+      <pubDate>Thu, 02 Jul 2020 12:05:55 +0100</pubDate>
+      <guid>https://dominicpm.github.io/posts/new-homepage/</guid>
+      <description>&lt;p&gt;Due to increasing unreliability of my website host, and regular security issues with WordPress, I have moved to a static site hosted on Github pages.&lt;/p&gt;
+</description>
+    </item>
   </channel>
 </rss>
