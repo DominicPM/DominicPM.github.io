@@ -1,25 +1,27 @@
 baseURL = "https://dominicpm.github.io/"
 languageCode = "en-gb"
 title = "Dominic Mulligan"
-theme = "beautifulhugo"
+theme = "hugo-flex"
 author = "Dominic Mulligan"
 copyright = "Dominic Mulligan, 2020&ndash;2022"
 enableRobotsTXT = true
 publishDir = "docs"
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    title = "About"
-    url = "/about/"
-    weight = 0
-  [[menu.main]]
-    identifier = "publications"
-    name = "Publications"
-    title = "Publications"
-    url = "/publications/"
-    weight = 0
+[params]
+color = "black"
+
+[[menu.nav]]
+identifier = "about"
+name = "About"
+title = "About"
+url = "/about/"
+weight = 0
+[[menu.nav]]
+identifier = "publications"
+name = "Publications"
+title = "Publications"
+url = "/publications/"
+weight = 0
