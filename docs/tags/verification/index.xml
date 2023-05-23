@@ -7,14 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Mon, 27 Feb 2023 17:20:15 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/verification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 19:49:29 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted TYPES 2022 post-proceedings paper</title>
+      <link>https://dominicpm.github.io/posts/types-2022-paper/</link>
+      <pubDate>Tue, 23 May 2023 19:49:29 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/types-2022-paper/</guid>
+      <description>I am delighted to announce that the paper All watched over by machines of loving grace, describing the Supervisionary proof-checking system for HOL, has been accepted in the post-proceedings of TYPES 2022.</description>
+    </item>
+    
     <item>
       <title>Accepted OOPSLA/SPLASH 2023 paper</title>
       <link>https://dominicpm.github.io/posts/oopsla-2023-paper/</link>
       <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
       
       <guid>https://dominicpm.github.io/posts/oopsla-2023-paper/</guid>
-      <description>I am delighted to announce that the paper &amp;ldquo;A verification methodology for the Arm Confidential Computing Architecture&amp;rdquo; co-written with Anthony Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Nathan Chong, and Gustavo Petri has now been accepted for publication at OOPSLA/SPLASH 2023.</description>
+      <description>I am delighted to announce that the paper &amp;ldquo;A verification methodology for the Arm Confidential Computing Architecture&amp;rdquo; co-written with Anthony Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Nathan Chong, and Gustavo Petri has now been accepted for publication at OOPSLA/SPLASH 2023.
+The PDF of the final version of the paper is here.</description>
     </item>
     
     <item>

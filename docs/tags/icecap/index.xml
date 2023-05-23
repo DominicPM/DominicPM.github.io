@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Wed, 25 May 2022 10:55:14 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/icecap/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 20:03:23 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/icecap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accepted IEEE TETCSI special issue paper</title>
+      <link>https://dominicpm.github.io/posts/tetcsi-2023-paper/</link>
+      <pubDate>Tue, 23 May 2023 20:03:23 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/posts/tetcsi-2023-paper/</guid>
+      <description>I am delighted to announce that the paper Private delegated computations using strong isolation has been accepted into a special issue on advances in emerging privacy-preserving computation at IEEE Transactions on Emerging Topics in Computer Science (TETCSI). The paper was coauthored with Mathias Brossard, Guilhem Bryant, Basma El Gaabouri, Xinxin Fan, Alexandre Ferreira, Edmund Grimley-Evans, Christopher Haster, Evan Johnson, Derek Miller, Fan Mo, Nick Spinale, Eric van Hensbergen, Hugo J. M.</description>
+    </item>
+    
     <item>
       <title>New technical report on the Icecap and Veracruz projects</title>
       <link>https://dominicpm.github.io/posts/icecap-veracruz-technical-report/</link>

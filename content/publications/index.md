@@ -8,7 +8,11 @@ Click [here](https://dblp2.uni-trier.de/pers/hd/m/Mulligan:Dominic_P=) for my DB
 
 # Journals
 
-- *A highly-available move operation for replicated trees.*
+- *Private delegated computations using strong isolation*.
+Accepted in ***IEEE Transactions on Emerging Topics in Computer Science**, 2023.
+To appear.
+[PDF](./bryant-private-2023.pdf)
+- *A highly-available move operation for replicated trees*.
 Martin Kleppmann, Dominic P. Mulligan, Victor Gomes, and Alastair Beresford.
 **IEEE Transactions on Parallel and Distributed Systems**, volume 33, issue 7, pages 1711&ndash;1734, 2021.
 [PDF](./kleppmann-highly-available-2021.pdf)
@@ -23,6 +27,10 @@ Murdoch J. Gabbay and Dominic P. Mulligan.
 
 # Conferences and workshops
 
+- *All watched over by machines of loving grace*.
+Dominic P. Mulligan.
+**Accepted into the TYPES 2022 post-proceedings**, 2023.
+[PDF](./mulligan-all-2023.pdf)
 - *A verification methodology for Arm Confidential Computing Architecture, from a secure specification to safe implementations*.
 Anthony C. J. Fox, Gareth Stockwell, Shale Xiong, Hanno Becker, Dominic P. Mulligan, Gustavo Petri, and Nathan Chong.
 **Accepted at OOPSLA/SPLASH**, 2023.

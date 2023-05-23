@@ -7,31 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Dominic Mulligan, 2020&amp;ndash;2022</copyright>
-    <lastBuildDate>Mon, 27 Feb 2023 17:20:15 +0000</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>arm</title>
-      <link>https://dominicpm.github.io/tags/arm/</link>
-      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/arm/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 23 May 2023 20:03:23 +0100</lastBuildDate><atom:link href="https://dominicpm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>confidential-computing</title>
       <link>https://dominicpm.github.io/tags/confidential-computing/</link>
-      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      <pubDate>Tue, 23 May 2023 20:03:23 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/confidential-computing/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>icecap</title>
+      <link>https://dominicpm.github.io/tags/icecap/</link>
+      <pubDate>Tue, 23 May 2023 20:03:23 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/icecap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>veracruz</title>
+      <link>https://dominicpm.github.io/tags/veracruz/</link>
+      <pubDate>Tue, 23 May 2023 20:03:23 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>verification</title>
       <link>https://dominicpm.github.io/tags/verification/</link>
-      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      <pubDate>Tue, 23 May 2023 19:49:29 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/verification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wasm</title>
+      <link>https://dominicpm.github.io/tags/wasm/</link>
+      <pubDate>Tue, 23 May 2023 19:49:29 +0100</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/wasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arm</title>
+      <link>https://dominicpm.github.io/tags/arm/</link>
+      <pubDate>Mon, 27 Feb 2023 17:20:15 +0000</pubDate>
+      
+      <guid>https://dominicpm.github.io/tags/arm/</guid>
       <description></description>
     </item>
     
@@ -50,24 +77,6 @@
       <pubDate>Mon, 27 Jun 2022 15:55:09 +0100</pubDate>
       
       <guid>https://dominicpm.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>icecap</title>
-      <link>https://dominicpm.github.io/tags/icecap/</link>
-      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/icecap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>veracruz</title>
-      <link>https://dominicpm.github.io/tags/veracruz/</link>
-      <pubDate>Wed, 25 May 2022 10:55:14 +0100</pubDate>
-      
-      <guid>https://dominicpm.github.io/tags/veracruz/</guid>
       <description></description>
     </item>
     
