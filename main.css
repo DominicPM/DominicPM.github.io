@@ -30,6 +30,12 @@ emph {
   font-style: italic;
 }
 
+tt {
+  font-family: "Source Code Pro";
+  font-size: 15px;
+  color: #444;
+}
+
 a:link {
   color: darkgreen;
   background-color: transparent;
@@ -39,6 +45,12 @@ a:link {
 hr {
   border-top: 1px dashed darkslategray;
   max-width: 250px;
+}
+
+code {
+  font-family: "Source Code Pro";
+  font-size: 15px;
+  color: #444;
 }
 
 div.employment {
